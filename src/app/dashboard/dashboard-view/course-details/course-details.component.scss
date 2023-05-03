@@ -1,0 +1,185 @@
+.courseDetails{
+  &__header{
+    p{
+      font-size: 1.4rem;
+      margin-top: .5rem;
+    }
+  }
+  &__sidebar {
+    position: sticky !important;
+    top: 8rem;
+    height: 600px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 80%;
+      background: #ebebeb;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #d9d9d9;
+    }
+  }
+  &__sideMenuList {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    li{
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      cursor: pointer;
+      span{
+        font-size: 1.4rem;
+        display: inline-block;
+        max-width: 80%;
+      }
+    }
+  }
+  &__courseCard{
+    padding: 2rem;
+    background: #fff;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: .14);
+  }
+  &__courseCardHeader{
+    p{
+      span{
+        img{
+          width: 3.5rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  &__lessonsList {
+    padding-left: 4.8rem;
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li{
+      width: 48%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width:1600px){
+  .cs__col2{
+    flex: 0 0 16.666667%;
+    max-width:16.666667%;
+  }
+  .cs__col10{
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+}
+
+@media screen and (max-width:1400px){
+  .courseDetails__masteryPoints{
+    p{
+      font-size: 1.4rem;
+    }
+  }
+  .courseDetails__lessonsList{
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width:992px){
+  .courseDetails__lessonsListItem{
+    margin-bottom: 1rem !important;
+    span{
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  span.view__chapterButton{
+    display: block !important;
+    position: absolute;
+    right: 0;
+    bottom: .6rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #43BF97;
+    color: #43BF97;
+  }
+  .courseDetails__courses{
+    padding-left: 0;
+  }
+  .courseDetails__header {
+    margin-bottom: 1rem;
+  }
+  .courseSidebar__wrapper{
+    display: none;
+    &.show__sidebar{
+      display: block !important;
+    }
+  }
+  .courseDetails__sidebar {
+    height: 35rem;
+  }
+  .courseDetails__sideMenuList li{
+    padding: 1rem 0;
+    span{
+      font-size: 1.3rem;
+    }
+  }
+  .courseDetails__masteryPoints{
+    h5{
+      font-size: 1.8rem;
+    }
+  }
+  .courseDetails__lessonsList{
+    flex-direction: column;
+    padding-left: 0;
+    li{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width:575px){
+  .courseDetails__courseCard{
+    padding: 1.5rem;
+  }
+  .courseDetails__masteryPoints{
+    h5{
+      font-size: 1.6rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+  }
+  .courseDetails__sideMenuTitle{
+    font-size: 1.4rem;
+  }
+  .courseDetails__sideMenuListItem{
+    padding: .8rem 0 !important;
+    span{
+      font-size: 1.2rem !important;
+    }
+  }
+  .courseDetails__courseCardHeader p span img{
+    width: 2.5rem;
+  }
+  .course__title{
+    font-size: 1.4rem;
+  }
+  .courseDetails__lessonsListItem span{
+    font-size: 1.2rem;
+  }
+  .courseDetails__lessonsListItem{
+    margin-bottom: .5rem !important;
+  }
+  .courseDetails__courseCardHeader{
+    p{
+      display: flex;
+    }
+  }
+}

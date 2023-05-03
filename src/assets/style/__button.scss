@@ -1,0 +1,98 @@
+// All button style start here
+
+button.btn__bgw__big{
+  padding: 1rem 3rem;
+  background: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: 1px solid #43BF97;
+  color: #43BF97;
+  border-radius: .8rem;
+  transition: .3s;
+  &:hover{
+    background: #43BF97;
+    color: #fff;
+  }
+}
+button.btn__bgw__mid{
+  padding: .8rem 2rem;
+  background: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid #43BF97;
+  color: #43BF97;
+  border-radius: .8rem;
+  transition: .3s;
+  &:hover{
+    background: #43BF97;
+    color: #fff;
+  }
+}
+button.btn__bgg__big{
+  padding: 1rem 3rem;
+  background: #43BF97;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: 1px solid #43BF97;
+  color: #fff;
+  border-radius: .8rem;
+  transition: .3s;
+  &:hover{
+    background: #fff;
+    color: #43BF97;
+  }
+}
+button.btn__bgg__mid{
+  padding: .8rem 2rem;
+  background: #43BF97;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid #43BF97;
+  color: #fff;
+  border-radius: .8rem;
+  transition: .3s;
+  &:hover{
+    background: #fff;
+    color: #43BF97;
+  }
+}
+button.btn__bgr__big{
+  padding: 1rem 3rem;
+  background: #eee;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: 1px solid #eee;
+  color: #707070;
+  border-radius: .8rem;
+  transition: .3s;
+  cursor: not-allowed;
+}
+button.btn__submit{
+  position: relative;
+  width: 100%;
+  height: 6rem;
+  background: #43BF97;
+  border: 1px solid #43BF97;
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  transition: .3s;
+  &:hover{
+    background: transparent;
+    color: #43BF97;
+  }
+}
+
+
+// Responsive style
+@media screen and (max-width:575px){
+  button.btn__bgw__big , button.btn__bgg__big , button.btn__bgr__big{
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  button.btn__submit{
+    height: 4.5rem;
+    font-size: 1.4rem;
+  }
+}

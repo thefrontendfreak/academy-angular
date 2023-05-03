@@ -1,0 +1,179 @@
+.userProgress {
+  &__status {
+    position: relative;
+    height: 100%;
+    align-items: center;
+    div{
+      border-bottom: 1px solid #363636;
+      margin-right: 3rem;
+      &:last-child{
+        margin-right: 0;
+      }
+      span{
+        vertical-align: middle;
+        font-size: 1.3rem;
+      }
+      span.number{
+        font-size: 2.6rem;
+        font-weight: 600;
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__tableWrapper{
+    position: relative;
+    width: 100%;
+    border: 1px solid #707070;
+    border-radius: 1rem;
+    table{
+      width: 100%;
+      th{
+        padding: 1.5rem;
+        border-bottom: 1px solid #DFDFDF;
+      }
+      td{
+        padding:1.5rem;
+        span.icon{
+          margin-right: 1rem;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+
+// Responsive style 
+
+@media screen and (max-width:1700px){
+  .status__wrapper{
+    position: absolute;
+    top: -8rem;
+    right: 0;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width:1600px){
+  .userProgress____secTitle{
+    padding-left: 0;
+  }
+  .userProgress__header{
+    padding-left: 0;
+  }
+  .userProgress__progressTable{
+    padding-left: 0;
+  }
+}
+@media screen and (max-width:1280px){
+  .userProgress__tableWrapper{
+    .userProgress__table{
+      tr,td{
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1199px){
+  .userProgress__tableWrapper{
+    .userProgress__table{
+      tr,td{
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:992px){
+  table.userProgress__table,
+  table.userProgress__table thead,
+  table.userProgress__table tbody,
+  table.userProgress__table th,
+  table.userProgress__table td,
+  table.userProgress__table tr {
+    display: block;
+    font-size: 14px;
+  }
+  table.userProgress__table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  table.userProgress__table td {
+    border: none;
+    position: relative;
+    padding-left: 45% !important;
+    white-space: normal;
+    text-align: left;
+  }
+  table.userProgress__table td[colspan="6"],
+  table.userProgress__table td[colspan="5"],
+  table.userProgress__table td[colspan="7"] {
+    padding-left: 0.75rem;
+  }
+  table.userProgress__table td:before {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    text-align: left;
+    font-weight: bold;
+  }
+  /* Label the data*/
+  table.userProgress__table td:before {
+    content: attr(data-title);
+  }
+  
+  table.userProgress__table tr {
+    margin: 10px 0;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: .5);
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  .userProgress__tableWrapper{
+    .userProgress__table{
+      tr,td{
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .status__wrapper{
+    position: relative;
+    top: inherit;
+    max-width: 100%;
+  }
+  .userProgress__activitiesFilter{
+    margin: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width:575px){
+  .userProgress__tableWrapper{
+    .userProgress__table{
+      td{
+        padding: .5rem 1rem;
+      }
+      tr{
+        padding: 0;
+      }
+    }
+  }
+  table.userProgress__table td:before{
+    left: 1rem !important;
+    top: 6px;
+  }
+  .userProgress____secTitle {
+    p{
+      font-size: 1.3rem;
+    }
+  }
+  .userProgress__status div span.number{
+    font-size: 1.8rem;
+  }
+}

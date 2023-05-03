@@ -1,0 +1,186 @@
+<div class="userCourses">
+    <div class="userCourses__courses mb__50">
+        <div class="userCourses__secTitle pl__30 pt__20">
+            <h4 class="pr__color underline">
+                My courses
+            </h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="userCourses__singleCourse">
+                    <div class="userCourses__singleCourseTitle">
+                        <p class="ht_color f__500">
+                            AP®︎/College Biology
+                            <span class="f__right pr__color c__pointer" [routerLink]="['/dashboard/coursedetails']" routerLinkActive="router-link-active" >
+                                (see all 10)
+                            </span>
+                        </p>          
+                    </div>
+                    <hr>
+                    <div class="userCourses__lessons">
+                        <button class="start__class btn__bgg__mid" [routerLink]="['/dashboard/courselessons']">Start class</button>
+                        <ul class="userCourses__lesssonlist">
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon1.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Chemistry of life
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon2.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Cell structure and function
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon3.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Cellular energetics
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon10.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Cell communication and cell 
+                                        ycle
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon9.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Cell communication and cell 
+c                                                   ycle
+                                    </span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="userCourses__singleCourse">
+                    <div class="userCourses__singleCourseTitle">
+                        <p class="ht_color f__500">
+                            High school biology
+                            <span class="f__right pr__color c__pointer">
+                                (see all 10)
+                            </span>
+                        </p>          
+                    </div>
+                    <hr>
+                    <div class="userCourses__lessons">
+                        <button class="start__class btn__bgg__mid" [routerLink]="['/dashboard/courselessons']">Start class</button>
+                        <ul class="userCourses__lesssonlist">
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/icon8.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Biology foundations
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/ciocon4.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Cells
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon3.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Energy and transport
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon6.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Reproduction and cell division
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="userCourses__lessonListItem">
+                                <p>
+                                    <span class="icon">
+                                        <img src="assets/img/icons/cicon7.png" alt="Icon" class="icon__img">
+                                    </span>
+                                    <span class="lesson__name">
+                                        Classical genetics
+                                    </span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="userCourses__singleCourse">
+                    <div class="userCourses__addCourse text-center c__pointer"(click)="openCourseModal()">
+                        <span class="icon d__block">
+                            <span class="material-icons">add</span>
+                        </span>
+                        <span class="f__500">Add more course</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="userCourses__learning pt__20 pl__30">
+        <div class="userCourses__learningTitle">
+            <h4 class="pr__color underline">Resume learning</h4>
+        </div>
+        <div class="userCourses__boxWrapper d__flex mt__45">
+            <div class="userCourses__singleLearningBox c__pointer">
+                <div class="img__box">
+                    <img src="assets/img/icons/ch__block.png" alt="CH img">
+                </div>
+                <div class="userCourses__lessonInfo mt__15">
+                    <p class="userCourses__lessonName ht__color f__500">
+                        Compound of chemistry
+                    </p>
+                    <p class="userCourses__chapterName pr__color f__500">
+                        AP®︎/College Chemistry
+                    </p>
+                </div>
+            </div>
+            <div class="userCourses__singleLearningBox startLearning c__pointer ">
+                <p class="ht__color f_500">Start learning something new</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

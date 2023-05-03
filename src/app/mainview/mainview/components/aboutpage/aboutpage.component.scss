@@ -1,0 +1,203 @@
+// about us hero banner style start
+.aboutusHeroBanner {
+  padding-top: 8rem;
+  &__title {
+    text-transform: uppercase;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__bannerImg {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// learning resources style start
+.learningResources {
+  padding-top: 8rem;
+  &__title {
+    text-transform: uppercase;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__bannerImg {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Free tools style start
+.freeTools {
+  padding-top: 8rem;
+  &__title {
+    text-transform: uppercase;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__bannerImg {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Global class room area style start
+.globalClassroom {
+  padding: 8rem 0;
+  &__content {
+    max-width: 94rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 3rem;
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+}
+
+// Humblebeginning area start
+.humbleBeginning {
+  padding: 8rem 0;
+  &__content {
+    max-width: 94rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 3rem;
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__btn {
+    button {
+      max-width: 30.6rem;
+      width: 100%;
+    }
+  }
+}
+
+
+// Responsive style
+
+@media screen and (max-width:992px){
+  .aboutusHeroBanner__title{
+    line-height: 3.2rem;
+  }
+  .learningResources__title{
+    line-height: 3.2rem;
+  }
+  .freeTools__title{
+    line-height: 3.2rem;
+  }
+}
+
+@media screen and (max-width:768px){
+  .aboutusHeroBanner{
+    padding-top: 3rem;
+  }
+  .aboutusHeroBanner__bannerImg {
+    margin-top: 5rem;
+  }
+  .learningResources__bannerImg {
+    margin-top: 4rem;
+  }
+  .freeTools__bannerImg {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width:575px){
+  .aboutusHeroBanner__title{
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .aboutusHeroBanner__text{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .aboutusHeroBanner__bannerImg{
+    margin-top: 2rem;
+    img{
+      height: 29rem;
+      object-fit: contain;
+    }
+  }
+  .learningResources{
+    padding-top: 5rem;
+  }
+  .learningResources__title{
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .learningResources__text{
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  .learningResources__bannerImg{
+    margin-top: 2rem;
+    img{
+      height: 29rem;
+      object-fit: contain;
+    }
+  }
+  .freeTools{
+    padding-top: 5rem;
+  }
+  .freeTools__title{
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .freeTools__text{
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  .freeTools__bannerIm{
+    margin-top: 2rem;
+    img{
+      height: 29rem;
+      object-fit: contain;
+    }
+  }
+  .globalClassroom{
+    padding: 3rem 0;
+  }
+  .globalClassroom__text{
+    p{
+      font-size: 1.2rem;
+    }
+  }
+  .humbleBeginning{
+    padding-top: 5rem;
+  }
+  .humbleBeginning__title{
+    text-align: left;
+    max-width: 280px;
+    margin-bottom: 1rem;
+    h3{
+      line-height: 2.5rem;
+    }
+  }
+  .humbleBeginning__text{
+    text-align: left;
+    margin-bottom: 2rem;
+    p{
+      font-size: 1.2rem;
+    }
+  }
+}

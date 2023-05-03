@@ -1,0 +1,93 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  &.underline{
+    display: inline-block;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #43BF97;
+  }
+}
+p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.6rem;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.8rem;
+}
+
+.f__400 {
+  font-weight: 400;
+}
+.f__500 {
+  font-weight: 500;
+}
+.f__600 {
+  font-weight: 600;
+}
+.f__700 {
+  font-weight: 700;
+}
+.f__900 {
+  font-weight: 900;
+}
+
+
+// Typography responsive part
+
+@media screen and (max-width:1200px){
+  h2{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width:992px){
+  h3{
+    font-size: 2.2rem;
+  }
+  h6.mn__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width:768px){
+  h4{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:575px){
+  h3{
+    font-size: 1.8rem;
+  }
+  h6.mn__title {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+  }
+  h4{
+    font-size: 1.8rem;
+  }
+}

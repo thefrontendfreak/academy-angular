@@ -1,0 +1,28 @@
+<div class="coursesSidebar">
+    <div class="coursesSidebar__wrapper">
+        <div class="coursesSidebar__title">
+            <h4 class="pr__color underline">
+                My stuff
+            </h4>
+        </div>
+        <div class="coursesSidebar__menu">
+            <ul class="coursesSidebar__menuList">
+                <li class="coursesSidebar__menuListItem">
+                    <span [routerLink]="['/dashboard/courses']" routerLinkActive="active" >Courses</span>
+                </li>
+                <!-- <li class="coursesSidebar__menuListItem">
+                    <span>SAT</span>
+                </li> -->
+                <li class="coursesSidebar__menuListItem">
+                    <span [routerLink]="['/dashboard/progress']" routerLinkActive="active">Progress</span>
+                </li>
+                <li class="coursesSidebar__menuListItem">
+                    <span [routerLink]="['/dashboard/profile']" routerLinkActive="active">Profile</span>
+                </li>
+                <li class="coursesSidebar__menuListItem">
+                    <span [routerLink]="['/dashboard/teachers']" routerLinkActive="active">Teacher</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

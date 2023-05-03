@@ -1,0 +1,123 @@
+.userTeachers {
+  &__inputWrapper{
+    margin-top: 1.5rem;
+    input{
+      width: 65%;
+      height: 5.5rem;
+    }
+  }
+  p.sm__text{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+  }
+  .st__id{
+    padding-left: 1.5rem;
+  }
+  &__addTeachers{
+    max-width: 49rem;
+    width: 100%;
+  }
+  &__teachersList{
+    max-width: 35rem;
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 4rem;
+    li{
+      position: relative;
+      margin-bottom: 3rem;
+      .teacherImg{
+        margin-right: 2rem;
+        img{
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .teacher__name{
+        font-size: 1.6rem;
+      }
+      .teacher__faculty{
+        font-size: 1.2rem;
+        color: #B5B5B5;
+      }
+      .chat__button {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+// Responsive style 
+
+@media screen and (max-width:1600px){
+  .userTeachers__wrapper {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width:768px){
+  .userTeachers__title{
+    p{
+      flex-direction: column;
+      span{
+        margin-bottom: 1rem;
+        padding-left: 0;
+      }
+    }
+  }
+  .userTeachers__joinClass{
+    margin-bottom: 3rem;
+  }
+  .userTeachers__tearchers{
+    p{
+      margin-top: 1rem;
+    }
+  }
+  .userTeachers__addTeachers {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width:575px){
+  .userTeachers__teachersList{
+    max-width: 100%;
+  }
+  .userTeachers__title{
+    p{
+      span{
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .userTeachers__details {
+    margin-top: 1.5rem;
+  }
+  .userTeachers__tearchers{
+    p{
+      font-size: 1.2rem;
+    }
+  }
+  .userTeachers__addTeachers {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width:460px){
+  .userTeachers__inputWrapper{
+    flex-direction: column;
+    input{
+      width: 100%;
+      height: 4rem;
+      margin-bottom: 1.5rem;
+    }
+    button{
+      height: 4rem;
+    }
+  } 
+}

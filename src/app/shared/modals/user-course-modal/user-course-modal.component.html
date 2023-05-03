@@ -1,0 +1,450 @@
+
+<!-- Course modal start -->
+<div class="coursesModal__wrapper">
+    <div class="coursesModal__header">
+        <button type="button" class="close__modal" aria-label="Close" (click)="hideModal()">
+            <span class="material-icons">clear</span>
+        </button>
+        <h4 class="ht__color text-center">
+            Personalize YoAcademy
+        </h4>
+    </div>
+    <div class="gradeInfo"*ngIf="!courseSelectNextStep">
+        <div class="gradeInfo__topBanner banner__box text-center">
+            <h5 class="color__wt mb__10">What grade are you in?</h5>
+            <p class="color__wt">
+                We'll gather the right lessons for you
+            </p>
+        </div>
+        <div class="gradeInfo__content content__box">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="gradeInfo__checkboxWrapper">
+                        <h6>Primary / Elementary</h6>
+                        <hr>
+                        <div class="radio__input">
+                            <input type="radio" id="radio1" name="grade_radio" value="radio1">
+                            <label for="radio1">Kindergarten / Year 0</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio2" name="grade_radio" value="radio2">
+                            <label for="radio2">Grade 1 / Year 1</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio3" name="grade_radio" value="radio3">
+                            <label for="radio3">Grade 2 / Year 2</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio4" name="grade_radio" value="radio4">
+                            <label for="radio4">Grade 3 / Year 3</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio5" name="grade_radio" value="radio5">
+                            <label for="radio5">Grade 4 / Year 4</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio6" name="grade_radio" value="radio6">
+                            <label for="radio6">Grade 5 / Year 5</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio7" name="grade_radio" value="radio7">
+                            <label for="radio7">Grade 6 / Year 6</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gradeInfo__checkboxWrapper">
+                        <h6>
+                            Secondary / High school
+                        </h6>
+                        <hr>
+                        <div class="radio__input">
+                            <input type="radio" id="radio8" name="grade_radio" value="radio8">
+                            <label for="radio8">Grade 7 / Year 7</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio9" name="grade_radio" value="radio9">
+                            <label for="radio9">Grade 8 / Year 8</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio10" name="grade_radio" value="radio10">
+                            <label for="radio10">Grade 9 / Year 9</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio11" name="grade_radio" value="radio11">
+                            <label for="radio11">Grade 10 / Year 10</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio12" name="grade_radio" value="radio12">
+                            <label for="radio12">Grade 11 / Year 11</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio13" name="grade_radio" value="radio13">
+                            <label for="radio13">Grade 12 / Year 12</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gradeInfo__checkboxWrapper">
+                        <h6>University / Adult learner</h6>
+                        <hr>
+                        <div class="radio__input">
+                            <input type="radio" id="radio15" name="grade_radio" value="radio15">
+                            <label for="radio15">1st year university</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio16" name="grade_radio" value="radio16">
+                            <label for="radio16">2nd year university</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio17" name="grade_radio" value="radio17">
+                            <label for="radio17">3rd year university</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio18" name="grade_radio" value="radio18">
+                            <label for="radio18">4th year university</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio19" name="grade_radio" value="radio19">
+                            <label for="radio19">Graduate studies</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio20" name="grade_radio" value="radio20">
+                            <label for="radio20">Adult learner</label>
+                        </div>
+                        <div class="radio__input">
+                            <input type="radio" id="radio21" name="grade_radio" value="radio21">
+                            <label for="radio21">Other</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="courseInfo" *ngIf="courseSelectNextStep">
+        <div class="courseInfo__topBanner banner__box text-center">
+            <h5 class="color__wt mb__10">What courses can we help you learn?</h5>
+            <p class="color__wt">
+                Choose 4–5 and we'll gather the right lessons for you.
+            </p>
+        </div>
+        <div class="courseInfo__content content__box">
+            <div class="courseInfo__singleCourse">
+                <div class="courseInfo__singleCourseTitle">
+                    <h5>Math</h5>
+                    <hr>
+                </div>
+                <div class="courseInfo__singleCourseLessons">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Pre-aljebra
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Aljebra 2
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Statistics
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Integral Calculus
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Get ready for Algebra 1
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Get ready for Precalculus
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Aljebra 1
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Trigonomertry
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Precalculus
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Calculus AB
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Get ready for Geometry
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        High school geometry
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        High school statistics
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Differential Calculus
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Calculus BC
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Get ready for Algebra 2
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="courseInfo__singleCourse">
+                <div class="courseInfo__singleCourseTitle">
+                    <h5>Science</h5>
+                    <hr>
+                </div>
+                <div class="courseInfo__singleCourseLessons">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        High school biology
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Chemistry
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Physics 2
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Physics library
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Biology
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        High school physics
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Biology library
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        High school geometry
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Chemistry beta 
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Physics 1
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Chemistry library
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="courseInfo__singleCourse">
+                <div class="courseInfo__singleCourseTitle">
+                    <h5>Economics</h5>
+                    <hr>
+                </div>
+                <div class="courseInfo__singleCourseLessons">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Mecroeconomics
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College 
+                                        Macroeconomics
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College Mecroeconomics
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        AP®︎/College 
+                                        Macroeconomics 2
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="courseInfo__lessonCheckboxWrapper">
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Mecroeconomics
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="courseInfo__singleCheckbox">
+                                    <label class="checkbox__conatiner">
+                                        Macroeconomics 1 
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coursesModal__footer mt__20">
+        <div class="footer__left" *ngIf="courseSelectNextStep">
+            <p class="pr__color goBack" (click)="courseBackStep()">Back</p>
+        </div>
+        <div class="footer__right" [ngClass]="{'cs__footer': courseSelectNextStep}">       
+            <p class="pt__color stepInfo">   
+                Step 1 of 2
+            </p>
+            <button class="btn__bgg__big" (click)="courseNextStep()" *ngIf="!courseSelectNextStep">
+                Continue
+            </button>
+            <button class="btn__bgr__big"  *ngIf="courseSelectNextStep">
+                Choose 1 course to continue
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Course modal ends -->

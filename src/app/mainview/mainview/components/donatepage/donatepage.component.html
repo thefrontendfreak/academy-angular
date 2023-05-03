@@ -1,0 +1,218 @@
+<!-- Donate hero banner start -->
+<div class="donateHerobanner">
+    <div class="container">
+        <div class="row ai__center">
+            <div class="col-md-6">
+                <div class="donateHerobanner__leftContent">
+                    <h3 class="donateHerobanner__title ht__color">
+                        Give the Donation of life
+                        changing education!
+                    </h3>
+                    <p class="donateHerobanner__text pt__color">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua.
+                    </p>  
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="donateHerobanner__rightContent p__relative">
+                    <div class="donateHerobanner__img">
+                        <img src="assets/img/donatehbanner.png" alt="Donate hero image">
+                    </div>
+                    <div class="donateHerobanner__playButton">
+                        <span class="material-icons">
+                            play_arrow
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Donate hero banner end -->
+
+<!-- Donate details start -->
+<div class="donateDetails">
+    <div class="container">
+        <div class="donateDetails__titleArea">
+            <h3 class="donateDetails__title ht__color">
+                Help us do more
+            </h3>
+            <p class="donateDetails__text pt__color">
+                We’ll get right to the point. With the coronavirus (COVID-19) creating mass
+                school closings, demand for has spiked. Please help us meet this demand.
+                A gift of $10 monthly would make a big difference. We’re a nonprofit
+                that relies on support from people like you. Thank you!
+            </p>
+        </div>
+        <div class="donateDetails__frequencySelection">
+            <h6 class="ht__color">
+                Select Donate frequency
+            </h6>
+            <div class="donateDetails__frequencyButton">
+                <span class="frequency__singleButton">
+                    Monthly
+                </span>
+                <span class="frequency__singleButton active">
+                    One time
+                </span>
+            </div>
+        </div>
+        <div class="donateDetails__currencySelection d-flex">
+            <div class="currencySelection__title">
+                <h6 class="ht__color">
+                    Select amount
+                </h6>
+            </div>
+            <div class="currencySelection__currencySelect">
+                <select name="" id="" class="pr__select b__none">
+                    <option value="">US dollars</option>
+                    <option value="">GBP</option>
+                    <option value="">Taka</option>
+                </select>
+            </div>
+        </div>
+        <div class="donateDetails__amountSelection d-flex ai__center">
+            <div class="donateDetails__singleAmount">
+                <span class="donateDetails__amountButton">$10</span>
+            </div>
+            <div class="donateDetails__singleAmount">
+                <span class="donateDetails__amountButton">$20</span>
+            </div>
+            <div class="donateDetails__singleAmount">
+                <span class="donateDetails__amountButton">$30</span>
+            </div>
+            <div class="donateDetails__singleAmount">
+                <span class="donateDetails__amountButton">$40</span>
+            </div>
+            <div class="donateDetails__singleAmount">
+                <span class="donateDetails__amountButton active">$50</span>
+            </div>
+            <div class="donateDetails__amountInput">
+                <input type="text" placeholder="Amount 00">
+            </div>
+        </div>
+        <div class="donateDetails__checkbox">
+            <label class="checkbox__conatiner">
+                Yes, I'll generously add $0.25 each month to cover the transaction fees so this academy can keep 100% of my donation.
+                <input type="checkbox" >
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="donateDetails__formWrapper">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="donateDetails__inputWrapper">
+                        <label for="">Name</label>
+                        <input type="text" class="pr__input" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="donateDetails__inputWrapper">
+                        <label for="">Honoree's name</label>
+                        <input type="text" class="pr__input" placeholder="Honoree's name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="donateDetails__inputWrapper">
+                        <label for="">Your email (optional)</label>
+                        <input type="email" class="pr__input" placeholder="Honoree's name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="donateDetails__inputWrapper">
+                        <label for="">Your Message (optional)</label>
+                        <input type="email" class="pr__input" placeholder="Honoree's name">
+                    </div>
+                </div>
+            </div>
+            <div class="donateDetails__paymentButton d-flex">
+                <button class="btn__bgg__big">Donate by credit card </button>
+                <button class="btn__bgg__big">Donate with PayPal</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Donate details start -->
+
+<div class="height__gap100"></div>
+
+<!-- Faq area start -->
+<div class="faq">
+    <div class="container">
+        <div class="faq__content">
+            <div class="faq__title">
+                <h3 class="ht__color">
+                    Frequently asked questions
+                </h3>
+            </div>
+            <accordion [isAnimated]="true">
+                <accordion-group *ngFor="let item of faqData" heading="{{item.title}}" class="faq__accordion">
+                    <p>{{item.faqText}}</p>
+                </accordion-group>
+            </accordion>
+        </div>
+    </div>
+</div>
+<!-- Faq area end -->
+
+<div class="height__gap100"></div>
+
+
+<!-- Get in touch area start -->
+<div class="getIntouch">
+    <div class="container mb__noPadding">
+        <div class="getIntouch__content">
+            <h3 class="getIntouch__title text-center">
+                Get in touch
+            </h3>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="getIntouch__inputWrapper">
+                                <input type="text" class="pr__input" placeholder="First name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="getIntouch__inputWrapper">
+                                <input type="text" class="pr__input" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="getIntouch__inputWrapper">
+                                <input type="email" class="pr__input" placeholder="example@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="getIntouch__inputWrapper">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message type here"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="getIntouch__sumbitButton text-center">
+                <button>Submit</button>
+            </div>
+        </div>
+        <div class="getIntouch__tcText">
+            <p class="pt__color">
+                If you have any other donation related questions not answered here,
+                please email donate@academy.org. If you have a question related to a
+                recent donation, please include your first and last name and the
+                email address used when making the donation.
+            </p>
+            <div class="pt__color">
+                <p>
+                    For all other inquiries not related to donations, such as help re-setting passwords, please visit
+                    the <span>Help center.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Get in touch area end -->
+
+<div class="height__gap100"></div>

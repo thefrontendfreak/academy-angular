@@ -1,0 +1,274 @@
+.userProfile {
+  &__card{
+    position: relative;
+    background: #fff;
+    border-radius: .6rem;
+    box-shadow: 0 10px 20px rgba($color: #363636, $alpha: .1);
+    height: 100%;
+    overflow: hidden;
+  }
+  &__cardHeader{
+    position: relative;
+    padding:1rem 2rem;
+    background: #43BF97;
+    color: #fff;
+    p.current__value{
+      font-size: 1.7rem;
+      cursor: pointer;
+      span.material-icons{
+        font-size: 1.8rem;
+        margin-top: -.3rem;
+      }
+    }
+    .privacy__box {
+      position: absolute;
+      top: 100%;
+      width: 18rem;
+      right: 1rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fff;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 0 20px rgba($color: #000000, $alpha: .2);
+      border-radius: .5rem;
+      z-index: 11;
+      transition:.3s ease-in-out;
+      &.show{
+        right: 2rem;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    span.view__button {
+      font-size: 1.2rem;
+      color: #363636;
+      margin-left: .5rem;
+      cursor: pointer;
+    }
+  }
+  &__cardBody {
+    padding: 2rem;
+    .badge__box {
+      padding: 2rem;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: .4rem;
+      box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .1);
+    }
+  }
+  &__status{
+    .curren__streak {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    span.sl__text{
+      font-size: 1.2rem;
+      color: #B5B5B5;
+    }
+    h4{
+      margin: .5rem 0;
+    }
+  }
+  &__statistics{
+    margin-top: 2rem;
+    p.s__title{
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    p{
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    span.e__point {
+      padding: 0.4rem 1rem;
+      border: 1px solid #43bf97;
+      border-radius: .5rem;
+    }
+  }
+  &__singlehSheildbadge {
+    width: 20%;
+  }
+  &__badges {
+  }
+  &__singlehBadge{
+    &.badge__box{
+      flex-direction: column;
+      width: 6.7rem;
+      padding: .8rem !important;
+      .badges__count {
+        padding: .3rem 1rem;
+        background: #43bf97;
+        border-radius: .5rem;
+        color: #fff;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  p.pr__color {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    width: auto;
+    margin-left: auto;
+    display: table;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+  .discussion__title {
+    max-width: 41rem;
+    margin-left: 2rem;
+  }
+  .discuttion__icon {
+    padding: 1rem 0;
+  }
+  &__projectWrapper{
+    .no__project{
+      h5{
+        margin-left: 2rem;
+        margin-top: 2rem;
+      }
+    }
+    button{
+      width: 21rem;
+      margin: 0 auto;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width:1600px){
+  .userProfile__wrapper {
+    padding-left: 0;
+  }
+  .userProfile__status {
+    h6{
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (max-width:1280px){
+  .curren__streak , .longest__streak{
+    h4{
+      font-size: 1.8rem;
+    }
+  }
+  .cs__col6{
+    max-width: 50%;
+    flex: 0 50%;
+  }
+  .cs__col12{
+    max-width: 100%;
+    flex: 0 100%;
+  }
+  .cs__order1{
+    order: 1;
+  }
+  .cs__order2{
+    order: 2;
+  }
+  .cs__order3{
+    order: 3;
+  }
+  .cs__order4{
+    order: 4;
+  }
+  .cs__order5{
+    order: 5;
+  }
+  .userProfile__badges{
+    flex-wrap: wrap;
+  }
+  .userProfile__singlehBadge.badge__box{
+    width: 8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width:992px){
+  .cs__col6{
+    max-width: 100%;
+    flex: 0 100%;
+  }
+}
+
+@media screen and (max-width:575px){
+  .userProfile__cardHeader {
+    h6{
+      font-size: 1.6rem;
+    }
+  }
+  .privacy{
+    p.current__value{
+      font-size: 1.2rem;
+    }
+  }
+  .userProfile__cardHeader{
+    padding: 1rem 1.5rem;
+  }
+  .userProfile__cardBody{
+    padding: 1.5rem;
+  }
+  .userProfile__cardBody .badge__box{
+    padding: 1rem;      
+  }
+  .userProfile__statistics{
+    p.s__title {
+      font-size: 1.4rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+  }
+  .userProfile p.pr__color{
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  .streak__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+  .curren__streak{
+    margin: 0 !important;
+  }
+  .curren__streak h4, .longest__streak h4{
+    font-size: 1.6rem;
+  }
+  .userProfile__status {
+    margin-top: 1rem;
+  }
+  .no__project {
+    align-items: center;
+    img{
+      width: 6rem;
+      height: 6rem;
+    }
+    h5{
+      margin-left: 1rem !important;
+      margin-top: 0 !important;
+      text-align: left;
+      font-size: 1.4rem;
+    }
+  }
+  .userProfile__discussionWrapper {
+    img{
+      width: 8rem;
+      height: 8rem;
+    }
+    .discussion__title{
+      margin-left: 1rem;
+      h4{
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+}

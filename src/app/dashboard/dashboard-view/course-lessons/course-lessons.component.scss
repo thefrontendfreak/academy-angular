@@ -1,0 +1,271 @@
+.courseLessons{
+  hr{
+    margin-top: .5rem;
+  }
+  &__header{
+    p{
+      font-size: 1.4rem;
+      margin-top: .5rem;
+    }
+  }
+  &__sidebar {
+    position: sticky !important;
+    top: 8rem;
+    height: 600px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 80%;
+      background: #ebebeb;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #d9d9d9;
+    }
+  }
+  &__skillSummery{
+    span.material-icons{
+      cursor: pointer;
+      color:#B5B5B5;
+      font-size:1.8rem;
+    }
+  }
+  &__sideMenuList {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    li{
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      cursor: pointer;
+      span{
+        font-size: 1.4rem;
+        display: inline-block;
+        max-width: 80%;
+      }
+    }
+  }
+  &__lessonCard {
+    position: relative;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border: 1px solid #B5B5B5;
+    border-radius: .5rem;
+    margin-bottom: 3rem;
+  }
+  &__quizCard{
+    position: relative;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border: 1px solid #B5B5B5;
+    border-radius: .5rem;
+    margin-bottom: 3rem;
+  }
+  &__lessonsListWrapper {
+    max-width: 490px;
+    width: 100%;
+  }
+  &__lessonsList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+      margin-bottom: 1rem;
+      span.courseLessons__ltemWrapper{
+        display: flex;
+        cursor: pointer;
+        span.icon {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  &__practiceWrapper{
+    max-width: 490px;
+    width: 100%;
+  }
+  &__practiceCard {
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #B5B5B5;
+    border-radius: .8rem;
+    .practice__title {
+      line-height: 2.2rem;
+    }
+    .lavelUp__text{
+      font-size: 1.4rem;
+      margin-top: .5rem;
+    }
+    button{
+      width: 120px;
+      margin-left: auto;
+      display: table;
+      margin-top: 2rem;
+    }
+  }
+  &__quizBanner{
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    width: 18rem;
+    padding: 1rem;
+    background: #fff;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+// Responsive style 
+
+@media screen and (min-width:1600px){
+  .cs__col2{
+    flex: 0 0 16.666667%;
+    max-width:16.666667%;
+  }
+  .cs__col10{
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+}
+
+@media screen and(max-width:1400px){
+  .cs__col12{
+    max-width: 100%;
+    flex: 0 100%;
+  }
+  .courseLessons__practiceWrapper{
+    max-width: 100%;
+  }
+  .courseLessons__masteryPoints{
+    p{
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width:995px){
+  .courseLessons__sideMenuList li{
+    padding: 1rem 0;
+  }
+  .courseLessons__sideMenuList li span{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and(max-width:768px){
+  span.view__chapterButton{
+    display: block !important;
+    position: absolute;
+    right: 0;
+    bottom: .6rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #43BF97;
+    color: #43BF97;
+  }
+  .courseLessons__lessonsWrapper {
+    padding-left: 0;
+  }
+  .courseLessons__header {
+    margin-bottom: 1rem;
+  }
+  .lessonSidebar__wrapper{
+    display: none;
+    &.show__sidebar{
+      display: block !important;
+    }
+  }
+  .courseLessons__sidebar {
+    height: 35rem;
+  }
+  .courseLessons__sideBarMenu {
+    margin-top: 1rem;
+  }
+  .courseLessons__quizCard{
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .courseLessons__quizBanner{
+    position: relative;
+    top: inherit;
+    right: inherit;
+    width: auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:575px){
+
+  .courseLessons__courseGroup {
+    font-size: 1.3rem !important;
+  }
+  .courseLessons__masteryPoints{
+    h5{
+      font-size: 1.6rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+  }
+  .courseLessons__skillSummery {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .courseLessons__sideMenuList li{
+    padding: .8rem 0;
+  }
+  .courseLessons__sideMenuList li span{
+    font-size: 1.2rem;
+  }
+  .courseLessons__lessonCard{
+    padding: 1.5rem;
+  }
+  .courseLessons__lessonTitle{
+    h6{
+      font-size: 1.6rem;
+      border-bottom: 0 ;
+    }
+  }
+  .courseLessons__singleLesson{
+    p{
+      margin-top: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+  .courseLessons__lessonsList li span.courseLessons__ltemWrapper{
+    font-size: 1.2rem;
+  }
+  .courseLessons__practiceCard{
+    .practice__title{
+      font-size: 1.4rem;
+      margin-top: 0;
+    }
+    .lavelUp__text{
+      font-size: 1.2rem;
+    }
+  }
+  
+  .courseLessons__quizTitle{
+    font-size: 1.6rem;
+  }
+  .quiz__text {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width:420px){
+  .courseLessons__quizCard{
+    flex-direction: column;
+  }
+  .courseLessons__quizBanner {
+    margin-top: 2rem;
+    width: 18rem !important;
+  }
+}
+
+@media screen and (max-width:360px){
+  span.view__chapterButton{
+    font-size: 1.2rem;
+    bottom: .5rem;
+  }
+}

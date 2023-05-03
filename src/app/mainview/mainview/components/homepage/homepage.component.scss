@@ -1,0 +1,622 @@
+// Hero banner style start
+
+.heroBanner {
+  &__content {
+    &--left {
+      h2 {
+        text-transform: uppercase;
+        line-height: 5.2rem;
+      }
+      .hs__btn {
+        button {
+          position: relative;
+          padding: 1rem 3rem;
+          font-size: 1.6rem;
+          font-weight: 600;
+          background: #fff;
+          border: 0;
+          box-shadow: 0 3px 6px rgba(51, 51, 51, 0.16);
+          border-radius: 0.5rem;
+          margin-right: 2.5rem;
+          transition: all 0.3s;
+          &:before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            width: 97%;
+            height: 97%;
+            background: transparent;
+            transform: translate(-50%, -50%);
+            border: 1px solid #fff;
+            border-radius: 0.5rem;
+          }
+          &:hover {
+            background: #43BF97;
+            color: #fff;
+            box-shadow: 0 10px 30px -10px rgba(51, 51, 51, 0.8);
+          }
+        }
+      }
+    }
+    &--right {
+      .img__wrapper {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Feature style start
+.feature {
+  &__container {
+    max-width: 995px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__singleFeature {
+    padding: 2.5rem 1rem;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.1);
+    border-radius: 1.4rem;
+    transition: 0.3s;
+    &--icon {
+      min-height: 4.4rem;
+      margin-bottom: 2rem;
+    }
+    &--title {
+      span {
+        font-weight: 500;
+      }
+    }
+    &:hover {
+      box-shadow: 0 20px 50px rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+}
+
+// Live class area start
+
+.liveClass {
+  &__banner {
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    h3 {
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+// Recommened class slider style
+.rclassesSlider,
+.mclassesSlider {
+  overflow: hidden;
+  .swiper-container {
+    overflow: visible !important;
+  }
+  &__singleClass {
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    &--img {
+      img {
+        width: 100%;
+      }
+    }  
+    &__content {
+      &--title {
+        span {
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+        margin-bottom: 2rem;
+      }
+      &--info {
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 0 10px 60px rgba($color: #000000, $alpha: 0.16);
+    }
+  }
+}
+
+// Teacher intro style start
+
+.teacahersIntro {
+  &__banner {
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    h3 {
+      max-width: 45rem;
+      width: 100%;
+      line-height: 3.8rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      max-width: 43rem;
+      width: 100%;
+      margin-bottom: 4rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+// Learner area style start
+.learner {
+  &__content {
+    h3 {
+      max-width: 48rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    p {
+      max-width: 48rem;
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+  }
+  &__banner{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+// Popular teacher style start
+.popularTeacher {
+  &__singleTeacher {
+    max-width: 30rem;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 6rem;
+    transition: 0.3s;
+    &--img {
+      img {
+        width: 100%;
+      }
+    }
+    &--info {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(
+        100deg,
+        white 0%,
+        rgba(255, 255, 255, 0) 80%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      .teacher__name {
+        span {
+          font-weight: 600;
+        }
+      }
+      .teacher__department {
+        margin-top: -0.5rem;
+        span {
+          font-size: 1.3rem;
+          font-weight: 500;
+        }
+      }
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 50px 70px -35px rgba($color: #000000, $alpha: 0.36);
+    }
+  }
+}
+
+// Vedio lesson area start
+
+.videoLesson {
+  &__content {
+    padding: 10rem 0;
+    padding-left: 6rem;
+    .play__button {
+      width: 6.5rem;
+      height: 6.5rem;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      cursor: pointer;
+      span {
+        font-size: 2.8rem;
+        color: #43BF97;
+      }
+    }
+    h3 {
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Student feedback style start
+
+.studentFeedback {
+  &__singleFeedback {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.08);
+    transition: all 0.3s;
+    .student__img {
+      img {
+        width: 8rem;
+        height: 7.5rem;
+        border-radius: 0.8rem;
+        box-shadow: 5px 5px 20px rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+    .subject__name {
+      font-size: 1.5rem;
+    }
+    .teacher__name {
+      margin-top: -0.5rem;
+      span {
+        font-size: 1.2rem;
+        color: #363636;
+        margin-left: 0.5rem;
+      }
+    }
+    p.student__name {
+      font-size: 1.4rem;
+      text-decoration: underline;
+    }
+    &:hover {
+      box-shadow: 0 20px 70px rgba($color: #000000, $alpha: 0.12);
+    }
+  }
+}
+
+// Digital class room area start
+.digitalClassroom {
+  &__content {
+    padding: 8rem 0;
+    h4 {
+      color: #fff;
+    }
+    p {
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto;
+      color: #fff;
+      margin-bottom: 3rem;
+    }
+    &--btnArea {
+      max-width: 85rem;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      button {
+        max-width: 18.5rem;
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3rem;
+        background: #fff;
+        color: #43bf97;
+        font-size: 1.8rem;
+        font-weight: 600;
+        border: 1px solid #fff;
+        border-radius: 0.5rem;
+        transition: all 0.3s;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          background: transparent;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// Responsive style
+@media screen and (max-width:1200px){
+  .heroBanner__content--left h2{
+    line-height: 4.8rem;
+  }
+  .heroBanner__content--left .hs__btn button{
+    margin-right: 2rem;
+  }
+  .liveClass__content{
+    padding-top: 0;
+  } 
+  .rclassesSlider {
+    padding-top: 5rem;
+  }
+  .rclassesSlider__singleClass__content--title span, .mclassesSlider__singleClass__content--title span{
+    font-size: 1.5rem;
+  }
+  .studentFeedback__singleFeedback .subject__name{
+    font-size: 1.4rem;
+  }
+  .studentFeedback__singleFeedback__text p {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media screen and (max-width:992px){
+  .heroBanner__content--left h2 {
+    font-size: 2.6rem;
+    line-height: 4rem !important;
+  }
+  p.hs__text {
+    margin-bottom: 3rem;
+  }
+  .heroBanner__content--left .hs__btn button{
+    margin-right: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+  .feature__container{
+    max-width: 720px;
+  }
+  .feature__singleFeature{
+    margin-bottom: 3rem;
+  }
+  .teacahersIntro__content h3{
+    line-height: 3.2rem; 
+  }
+  .popularTeacher__singleTeacher{
+    margin-bottom: 3rem;
+  }
+  .videoLesson__content{
+    padding: 5rem 0;
+    padding-left: 5rem;
+  }
+  .liveClass__content h3{
+    margin-bottom: 1rem;
+  }
+  .liveClass__content p {
+    font-size: 1.4rem;
+  }
+  .studentFeedback__content{
+    .row{
+      justify-content: center;
+    }
+  }
+  .studentFeedback__singleFeedback {
+    margin-bottom: 3rem;
+  }
+  .digitalClassroom__content--btnArea{
+    max-width: 55rem;
+  }
+  .digitalClassroom__content--btnArea button{
+    height: 4rem;
+    font-size: 1.3rem;
+    margin-right: 2rem;
+  }
+}
+
+
+
+@media screen and (max-width:768px){
+  .heroBanner__content--left {
+    padding-top: 3rem;
+  }
+  .hs__btn {
+    justify-content: center;
+  }
+  .feature__container{
+    max-width: 520px;
+    padding: 0 15px;
+  }
+  .rclassesSlider__singleClass__content--title, .mclassesSlider__singleClass__content--title{
+    margin-bottom: 1rem;
+  }
+  .rclassesSlider__singleClass__content--title span, .mclassesSlider__singleClass__content--title span{
+    font-size: 1.4rem;
+  }
+  .rclassesSlider__singleClass__content--info span, .mclassesSlider__singleClass__content--info span{
+    font-size: 1.2rem;
+  }
+  .digitalClassroom__content--btnArea{
+    flex-wrap: wrap;
+    button{
+      margin-right: 1rem;
+      margin-top: 1rem;
+      &:nth-child(2){
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:575px){
+  .heroBanner__content--left h2 {
+    font-size: 2.2rem;
+    line-height: 3rem !important;
+    max-width: 28rem;
+  }
+  p.hs__text {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .heroBanner__content--left .hs__btn button{
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .feature__title {
+    text-align: left !important;
+    padding-left: 1.5rem;
+    h3{
+      font-size: 1.8rem;
+    }
+  }
+  .feature__singleFeature{
+    padding: 1.5rem .5rem;;
+  }
+  .feature__singleFeature--icon{
+    margin-bottom: 1rem;
+  }
+  .feature__singleFeature--title span{
+    font-size: 1.2rem;
+  }
+  .liveClass__banner .img__wrapper img{
+    height: 22rem;
+    object-fit: contain;
+  }
+  .rclassesSlider{
+    padding-top: 3rem;
+  }
+  .teacahersIntro__content h3{
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .teacahersIntro__content p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .teacahersIntro__banner img {
+    height: 27.8rem;
+    object-fit: contain;
+  }
+  .learner__content h3{
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .learner__content p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .popularTeacher h3.m__title {
+    text-align: left !important;
+    margin-bottom: 3rem;
+  }
+  .learner__banner img {
+    height: 27.8rem;
+    object-fit: contain;
+  }
+  .popularTeacher__singleTeacher--info .teacher__name span{
+    font-size: 1.2rem;
+  }
+  .popularTeacher__singleTeacher--info .teacher__department span {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: -.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .popularTeacher__singleTeacher--info {
+    padding: .8rem;
+  }
+  
+  .liveClass__content p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .videoLesson h3{
+    display: block;
+  }
+  .videoLesson__content{
+    padding: 0;
+    padding-left: 0;
+    background-image: none !important;
+    p{
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
+  }
+  .play__buttonbg{
+    display: block !important;
+    img{
+      width: 100%;
+    }
+    margin-bottom: 2rem;
+  }
+  .videoLesson__content .play__button{
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    transform: translateY(-50%);
+  }
+  .studentFeedback h3 {
+    text-align: left !important;
+    margin-bottom: 3rem;
+  }
+  .studentFeedback__singleFeedback__text {
+    p{
+      font-size: 1.2rem;
+      line-height: 2.2rem;  
+    }
+    p.student__name{
+      margin-top: 1rem;
+    }
+  }
+  .digitalClassroom__content{
+    padding: 4rem 1.5rem;
+    h4{
+      font-size: 1.8rem;
+      text-align: left !important;
+      line-height: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p{
+      font-size: 1.2rem;
+      line-height: 2rem;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+  }
+  .digitalClassroom__content--btnArea {
+    button{
+      margin-right: 1rem !important;
+      max-width: 11.5rem;
+    }
+  }
+}
+
+@media screen and (max-width:355px){
+  .feature__singleFeature--title span{
+    font-size: 1rem;
+  }
+} 
+@media screen and (max-width:310px){
+  .hs__btn{
+    flex-wrap: wrap;
+    button{
+      &:last-child{
+        margin-top: 1rem;
+      }
+    }
+  } 
+}

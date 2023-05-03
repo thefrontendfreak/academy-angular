@@ -1,0 +1,43 @@
+<div class="coursesPage">
+    <div class="coursesPage__header d__flex jc__between ai__center  p__relative">
+        <div class="coursesPage__headerLeft mb__25" [routerLink]="['/dashboard/settings']">
+            <div class="coursesPage__userInfo d__flex ai__center">
+                <div class="coursesPage__userImg">
+                    <img src="assets/img/teacher3.png" alt="User img">
+                </div>
+                <div class="coursesPage__details">
+                    <div class="coursesPage__name">
+                        <h5 class="ht__color">Natasha Mathew</h5>
+                        <span class="coursesPage__username">
+                            Pick a username
+                        </span>
+                        -
+                        <span class="coursesPage__bio">
+                            Add your Bio
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coursesPage__headerRight">
+            <button class="btn__bgg__mid" (click)="openCourseModal()">Edit Courses</button>
+        </div>
+    </div>
+    <div class="coursesPage__content">
+        <div class="row no-gutters b__top">
+            <div class="col-md-3 col-lg-2 b__right lp__grid12">
+                <app-courses-page-sidebar></app-courses-page-sidebar>
+            </div>
+            <div class="col-md-9 col-lg-10 lp__grid12">
+                <app-user-courses *ngIf="showUserCourses"></app-user-courses>
+                <app-dashboard-progress-page *ngIf="showUserProgress"></app-dashboard-progress-page>
+                <app-user-profile *ngIf="showUserProfile"></app-user-profile>
+                <app-user-teachers *ngIf="showUserTeachers"></app-user-teachers>
+                <app-user-badges *ngIf="showUserBadges"></app-user-badges>
+                <app-user-discussions *ngIf="showUserDiscussions"></app-user-discussions>
+            </div>
+        </div>
+    </div>
+</div>
+
+

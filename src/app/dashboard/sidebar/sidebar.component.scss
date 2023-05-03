@@ -1,0 +1,141 @@
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 26rem;
+  height: 100vh;
+  background: #43bf97;
+  z-index: 1111;
+  transition: .4s;
+  overflow: hidden;
+  span.hide__button {
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+    color: #fff;
+    display: none;
+  }
+  &__logo {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    span {
+      color: #fff;
+      font-size: 2.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
+  &__menuList {
+    list-style: none;
+    padding: 0;
+    padding-right: 2rem;
+    margin: 0;
+  }
+  &__menuListItem {
+    position: relative;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: .3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    white-space: pre;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: 0.3s;
+    svg {
+      vertical-align: middle;
+      fill: #ebebeb;
+      margin-right: 2rem;
+    }
+    i {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      background: #fff;
+      color: #363636;
+      svg {
+        fill: #363636 !important;
+      }
+    }
+    &.active {
+      background: #fff;
+      color: #363636;
+      svg {
+        fill: #363636 !important;
+        path{
+          stroke: #363636 !important;
+        }
+      }
+    }
+    &:first-child{
+      &:hover{
+        svg {
+          path{
+            stroke: #363636 !important;
+          }
+        }
+      }
+    }
+  }
+  &.toggled{
+    width: 7rem;
+    .sideMenu__logo{
+      padding: 2rem 0;
+    }
+    .sideMenu__menuList{
+      padding-right: 0;
+    }
+    .sideMenu__menuListItem{
+      border-radius: 0;
+      margin-bottom: 0;
+      padding: 2rem 2.4rem;
+      span.menu__text{
+        opacity: 0;
+        display: none;
+        transition: .3s;
+      }
+    }
+  }
+}
+
+
+// Responsive style
+
+@media screen and (max-width:1080px){
+  .sideMenu{
+    width: 16rem;
+    left: -26rem;
+    .d__logo{
+      opacity: 0;
+    }
+    .hide__button{
+      display: block !important;
+    }
+    &.toggled{
+      width: 26rem;
+      left: 0;
+      transition: .4s;
+      .sideMenu__menuList{
+        padding-right: 2rem;
+      }
+      .sideMenu__menuListItem{
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        span.menu__text{
+          display: block;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

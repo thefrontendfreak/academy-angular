@@ -1,0 +1,355 @@
+<!-- Header area start -->
+<header class="header" [ngClass]="{'d__header': dashboardView}">
+    <nav class="navbar p__0">
+        <div class="container" [ngClass]="{'d__container': dashboardView}">
+            <div class="navbar__left d__flex ai__center" [ngClass]="{'tg__noMargin': status}">
+                <span class="logo f__900 mr__40 pr__color" [routerLink]="['/']" [ngClass]="{'d-none': dashboardView}">
+                    o<span>school.</span>
+                </span>
+                <span class="dashboardSidebar__toggleButton" (click)="sidebarToggleHandler()" *ngIf="dashboardView">
+                    <span class="toggleButton__line"></span>
+                    <span class="toggleButton__line"></span>
+                    <span class="toggleButton__line"></span>
+                </span> 
+                <div class="search__area" [ngClass]="{'d-none': signin.isActive ||  signup.isActive , 'tm__show' : showHeaderSearch}">
+                    <div class="search__feild">
+                        <input type="text" class="form-control gr__input" placeholder="Search">
+                        <button class="search__submit">
+                            <span class="material-icons">search</span>
+                        </button>
+                    </div>
+                    <span class="search__hide__button" (click)="headerSearchHide()">
+                        <span class="material-icons">
+                            clear
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="navbar__menu d__flex">
+
+                <!-- Nav links menu -->
+                <ul class="navbar__menu--list d__flex p__0 m__0 ai__center menu__one">
+                    <!-- <li class="navbar__menu--list--item" [ngClass]="{'d-none': signin.isActive ||  signup.isActive}" *ngIf="!dashboardView">
+                        <span  [routerLink]="['/home']" routerLinkActive="active">Home</span>
+                    </li> -->
+                    <li class="navbar__menu--list--item" [ngClass]="{'d-none': signin.isActive ||  signup.isActive}" *ngIf="!dashboardView">
+                        <span [routerLink]="['/courses']" routerLinkActive="active">Courses</span>
+                    </li>
+                    <li class="navbar__menu--list--item" [ngClass]="{'d-none': signin.isActive ||  signup.isActive}" *ngIf="!dashboardView">
+                        <span [routerLink]="['/about']" routerLinkActive="active">About</span>
+                    </li>
+                    <li class="navbar__menu--list--item" [ngClass]="{'d-none': signin.isActive ||  signup.isActive}" *ngIf="!dashboardView">
+                        <span [routerLink]="['/donate']" routerLinkActive="active">Donate</span>   
+                    </li> 
+                </ul>
+
+                <!-- User menu -->
+                <ul class="navbar__menu--list  d__flex p__0 m__0 ai__center menu__two">
+                    <li class="navbar__menu--list--item sign__in" [ngClass]="{'d-none': signin.isActive ||  signup.isActive}" *ngIf="!dashboardView">
+                        <span [routerLink]="['/signin']" routerLinkActive  #signin="routerLinkActive">Sign in</span>
+                    </li>
+                    <li class="navbar__menu--list--item d-none signIn__area" [ngClass]="{'__show': signin.isActive}">
+                        <span>Dont have an account? <span  class="pr__color sign__up" [routerLink]="['/signup']" routerLinkActive #signup="routerLinkActive" >Sign Up</span> </span>
+                    </li>
+                    <li class="navbar__menu--list--item d-none signIn__area" [ngClass]="{'__show': signup.isActive}">
+                        <span>All ready have an account? <span  class="pr__color sign__up" [routerLink]="['/signin']" routerLinkActive #signin="routerLinkActive" >Sign In</span> </span>
+                    </li>
+                    <li class="navbar__menu--list--item notification__message p__relative" *ngIf="dashboardView" (click)="notificationsHandler()" #notificationToggle>
+                        <span class="icon">
+                            <span class="material-icons n__button">
+                                notifications
+                            </span>
+                        </span>
+                        <span class="counter">4</span>
+
+                        <!-- Notifications box start here -->
+                        <div class="notifications" [ngClass]="{'show': showNotidications}" #notifications>
+                            <div class="notifications__header">
+                                <h6 class="ht__color f__600">Notification</h6>
+                            </div>
+                            <ul class="notifications__list">
+                                <li class="notifications__listItem d__flex unSeen">
+                                    <div class="notifications__usersImg">
+                                        <img src="assets/img/teacher1.png" alt="User's Image">
+                                    </div>
+                                    <div class="notifications__content">
+                                        <span class="notifications__title pr__color">New notification</span>
+                                        <span class="notifications__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">2 min ago</span>
+                                    </span>
+                                </li>
+                                <li class="notifications__listItem d__flex unSeen">
+                                    <div class="notifications__usersImg">
+                                        <img src="assets/img/teacher2.png" alt="User's Image">
+                                    </div>
+                                    <div class="notifications__content">
+                                        <span class="notifications__title pr__color">New notification</span>
+                                        <span class="notifications__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">5 min ago</span>
+                                    </span>
+                                </li>
+                                <li class="notifications__listItem d__flex">
+                                    <div class="notifications__usersImg">
+                                        <img src="assets/img/teacher4.png" alt="User's Image">
+                                    </div>
+                                    <div class="notifications__content">
+                                        <span class="notifications__title pr__color">New notification</span>
+                                        <span class="notifications__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">7 min ago</span>
+                                    </span>
+                                </li>
+                                <li class="notifications__listItem d__flex">
+                                    <div class="notifications__usersImg">
+                                        <img src="assets/img/teacher5.png" alt="User's Image">
+                                    </div>
+                                    <div class="notifications__content">
+                                        <span class="notifications__title pr__color">New notification</span>
+                                        <span class="notifications__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">3 days ago</span>
+                                    </span>
+                                </li>
+                                <li class="notifications__listItem d__flex">
+                                    <div class="notifications__usersImg">
+                                        <img src="assets/img/teacher6.png" alt="User's Image">
+                                    </div>
+                                    <div class="notifications__content">
+                                        <span class="notifications__title pr__color">New notification</span>
+                                        <span class="notifications__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">5 days ago</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Notification box ends -->
+                    </li>
+                    <li class="navbar__menu--list--item notification__message p__relative" *ngIf="dashboardView" (click)="messagesHandler()">
+                        <span class="icon">
+                            <span class="material-icons">
+                                chat
+                            </span>
+                        </span>
+                        <span class="counter">2</span>
+                        <div class="messages" [ngClass]="{'show': showMessages}">
+                            <div class="notifications__header">
+                                <h6 class="ht__color f__600">Messages</h6>
+                            </div>
+                            <ul class="messages__list">
+                                <li class="messages__listItem d__flex unSeen">
+                                    <div class="messages__usersImg">
+                                        <img src="assets/img/teacher6.png" alt="User's Image">
+                                    </div>
+                                    <div class="messages__content">
+                                        <span class="messages__title pr__color">Message from Jaber</span>
+                                        <span class="messages__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">5 days ago</span>
+                                    </span>
+                                </li>
+                                <li class="messages__listItem d__flex unSeen">
+                                    <div class="messages__usersImg">
+                                        <img src="assets/img/teacher6.png" alt="User's Image">
+                                    </div>
+                                    <div class="messages__content">
+                                        <span class="messages__title pr__color">Message from Pream</span>
+                                        <span class="messages__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">5 days ago</span>
+                                    </span>
+                                </li>
+                                <li class="messages__listItem d__flex">
+                                    <div class="messages__usersImg">
+                                        <img src="assets/img/teacher6.png" alt="User's Image">
+                                    </div>
+                                    <div class="messages__content">
+                                        <span class="messages__title pr__color">Message from Sadik</span>
+                                        <span class="messages__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">5 days ago</span>
+                                    </span>
+                                </li>
+                                <li class="messages__listItem d__flex">
+                                    <div class="messages__usersImg">
+                                        <img src="assets/img/teacher6.png" alt="User's Image">
+                                    </div>
+                                    <div class="messages__content">
+                                        <span class="messages__title pr__color">Message from Suhin</span>
+                                        <span class="messages__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">5 days ago</span>
+                                    </span>
+                                </li>
+                                <li class="messages__listItem d__flex">
+                                    <div class="messages__usersImg">
+                                        <img src="assets/img/teacher6.png" alt="User's Image">
+                                    </div>
+                                    <div class="messages__content">
+                                        <span class="messages__title pr__color">Message from Dipen</span>
+                                        <span class="messages__text">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing 
+                                            elitr, sed diam nonumy.
+                                        </span>
+                                    </div>
+                                    <span class="time">
+                                        <span class="material-icons">
+                                            alarm
+                                        </span>
+                                        <span class="time__count">5 days ago</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="navbar__menu--list--item user d__flex p__relative" *ngIf="dashboardView" (click)="userMenuhandler()">
+                        <div class="user__img">
+                            <img src="assets/img/teacher3.png" alt="User avatar">
+                        </div>
+                        <div class="user__name">
+                            <span class="pr__color name">Natasha</span>
+                            <span class="material-icons">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+                        <div class="userMenu" [ngClass]="{'show': showUsermenu}">
+                            <ul class="userMenu__list">
+                                <li class="userMenu__listItem">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 13.861 13.822">
+                                            <g id="Page-1" transform="translate(-0.322 0.1)">
+                                              <g id="_026---Idea" data-name="026---Idea" transform="translate(0.424)">
+                                                <path id="Shape" d="M13.058,13.3a.462.462,0,0,0-.453-.375h-.446l-.033-.2a.464.464,0,0,0-.386-.383c-.044-.007-.088-.012-.132-.018a1.408,1.408,0,0,0-.175-1.03.945.945,0,0,0-.685-1.264,1.965,1.965,0,0,0-1.919-1.6c-.023,0-.044,0-.066,0a.939.939,0,0,0-1.437-.179A1.585,1.585,0,0,0,6.464,8a1.6,1.6,0,0,0-1.26.621,1.15,1.15,0,0,0-1.47,1.033.95.95,0,0,0-.582.876.939.939,0,0,0,.023.2,1.858,1.858,0,0,0-.221,1.593l-.185.025a.465.465,0,0,0-.389.382l-.033.2H1.9a.462.462,0,0,0-.453.374L.437,18.488a.693.693,0,0,0,.681.825H5.933a1.624,1.624,0,0,0,1.32.462,1.615,1.615,0,0,0,1.314-.462h4.821a.693.693,0,0,0,.681-.824ZM3.85,10.947a.488.488,0,0,1,.249-.906.479.479,0,0,1,.388.2.231.231,0,0,0,.371-.275A.933.933,0,0,0,4.2,9.593a.7.7,0,0,1,.685-.556.719.719,0,0,1,.084.009,1.516,1.516,0,0,0-.048.145.231.231,0,0,0,.447.115,1.123,1.123,0,0,1,.12-.289,1.14,1.14,0,0,1,.974-.556,1.121,1.121,0,0,1,.612.185.939.939,0,0,0-.054.3.231.231,0,0,0,.462,0,.486.486,0,1,1,.971,0,.231.231,0,0,0,.462,0c0-.018,0-.035-.005-.052a1.5,1.5,0,0,1,1.367,1.156.937.937,0,0,0-.3.149.231.231,0,1,0,.277.369.487.487,0,0,1,.714.63.492.492,0,0,1-.219.2.231.231,0,0,0,.1.439.228.228,0,0,0,.1-.022.948.948,0,0,0,.172-.108.986.986,0,0,1-.2.985l-.006.006a1,1,0,0,1-1.177.216.917.917,0,0,1-.112-.07.786.786,0,0,0,.061-.813.231.231,0,1,0-.413.208.344.344,0,0,1-.111.435.348.348,0,0,1-.5-.128.231.231,0,1,0-.413.207.8.8,0,0,0,.719.445.792.792,0,0,0,.29-.057,1.367,1.367,0,0,0,.271.185,1.422,1.422,0,0,0,1.066.1,1.472,1.472,0,0,1-.951.583.231.231,0,0,0,.036.459l.037,0a1.9,1.9,0,0,0,.41-.12,2.064,2.064,0,0,1,.172.4.238.238,0,0,1,.012.075.249.249,0,0,1-.151.229.261.261,0,0,1-.3-.08,1.474,1.474,0,0,0-.676-.449c-.5-.167-.691-.317-.773-.479a2.216,2.216,0,0,0,.354-.074.231.231,0,0,0-.136-.441,1.75,1.75,0,0,1-.4.073,1.714,1.714,0,0,1-.765-.115.231.231,0,0,0-.259.064.989.989,0,0,1-1.594-1.156.232.232,0,0,0-.4-.238,1.442,1.442,0,0,0-.132.3.346.346,0,0,1-.328-.34V12.1a.228.228,0,0,0-.231-.228.233.233,0,0,0-.231.234.8.8,0,0,0,.717.8,1.449,1.449,0,0,0,.021.231,1.411,1.411,0,0,1-1.6-1.932.931.931,0,0,0,.172.137.231.231,0,0,0,.238-.4ZM2.835,12.8c.106-.016.216-.03.326-.044a1.864,1.864,0,0,0,2.025.821,1.446,1.446,0,0,0,2.265.384,2.216,2.216,0,0,0,.482.087c.112.423.434.679,1.111.906a1.023,1.023,0,0,1,.47.31.735.735,0,0,0,.558.262.7.7,0,0,0,.274-.056.711.711,0,0,0,.432-.654.685.685,0,0,0-.035-.218,2.524,2.524,0,0,0-.2-.47,1.946,1.946,0,0,0,.767-1.173,1.446,1.446,0,0,0,.133-.186c.077.01.155.019.232.032l.833,5.013a7.925,7.925,0,0,0-5.02,0v-2.89a.231.231,0,0,0-.462,0v2.891a7.927,7.927,0,0,0-5.02,0Zm-1.9,5.964a.229.229,0,0,1-.048-.189L1.9,13.386H2.27l-.725,4.354a.463.463,0,0,0,.6.516,7.724,7.724,0,0,1,3.813-.242l-.069.837H1.118a.233.233,0,0,1-.18-.085Zm6.314.547a1.362,1.362,0,0,1-.922-.238l.079-.958a4.934,4.934,0,0,1,.743.249.233.233,0,0,0,.1.023.23.23,0,0,0,.1-.023,4.918,4.918,0,0,1,.743-.251l.079.96a1.36,1.36,0,0,1-.922.238Zm6.314-.547a.232.232,0,0,1-.18.085H8.62l-.069-.839a7.726,7.726,0,0,1,3.815.244.463.463,0,0,0,.594-.517l-.724-4.353H12.6l1.011,5.19A.229.229,0,0,1,13.567,18.766Z" transform="translate(-0.424 -6.153)"  stroke-width="0.2"/>
+                                                <path id="Shape-2" data-name="Shape" d="M26.433,20.61a.231.231,0,0,0-.016.326,1.392,1.392,0,0,0,.74.427.688.688,0,0,1-.562.29.231.231,0,0,0,0,.462,1.145,1.145,0,0,0,1.076-.74,1.393,1.393,0,0,0,1.14-1.108.231.231,0,1,0-.453-.087.92.92,0,0,1-.382.586.942.942,0,0,1-1.215-.139.231.231,0,0,0-.326-.016Z" transform="translate(-20.369 -15.372)"  stroke-width="0.2"/>
+                                                <path id="Shape-3" data-name="Shape" d="M22.431,17.293a.231.231,0,0,0,.231-.231.6.6,0,0,1,.6-.6.231.231,0,1,0,0-.462A1.063,1.063,0,0,0,22.2,17.062a.231.231,0,0,0,.231.231Z" transform="translate(-17.172 -12.306)"  stroke-width="0.2"/>
+                                                <path id="Shape-4" data-name="Shape" d="M29.462.462V.231a.231.231,0,1,0-.462,0V.462a.231.231,0,1,0,.462,0Z" transform="translate(-22.402)"  stroke-width="0.2"/>
+                                                <path id="Shape-5" data-name="Shape" d="M45.406,6.941l-.231.231A.231.231,0,1,0,45.5,7.5l.231-.231a.231.231,0,1,0-.326-.326Z" transform="translate(-34.789 -5.284)"  stroke-width="0.2"/>
+                                                <path id="Shape-6" data-name="Shape" d="M12.335,7.566a.231.231,0,0,0,.163-.394l-.231-.231a.231.231,0,1,0-.326.326l.231.231a.231.231,0,0,0,.163.068Z" transform="translate(-9.228 -5.284)"  stroke-width="0.2"/>
+                                                <path id="Shape-7" data-name="Shape" d="M19.922,1.99a.234.234,0,0,0,.088-.018.231.231,0,0,0,.125-.3l-.265-.64a.231.231,0,1,0-.426.177l.265.64a.231.231,0,0,0,.213.142Z" transform="translate(-15.037 -0.679)"  stroke-width="0.2"/>
+                                                <path id="Shape-8" data-name="Shape" d="M38,.92a.231.231,0,0,0-.3.125l-.265.64a.231.231,0,0,0,.125.3A.234.234,0,0,0,37.649,2a.231.231,0,0,0,.213-.142l.265-.64A.231.231,0,0,0,38,.92Z" transform="translate(-28.877 -0.694)"  stroke-width="0.2"/>
+                                                <path id="Shape-9" data-name="Shape" d="M49.553,15.16a.231.231,0,0,0,.088-.018l.64-.265a.231.231,0,1,0-.177-.427l-.64.265a.231.231,0,0,0,.088.444Z" transform="translate(-38.032 -11.101)"  stroke-width="0.2"/>
+                                                <path id="Shape-10" data-name="Shape" d="M6.686,15.142a.231.231,0,1,0,.177-.427l-.64-.265a.231.231,0,1,0-.177.427Z" transform="translate(-4.638 -11.1)"  stroke-width="0.2"/>
+                                              </g>
+                                            </g>
+                                          </svg>
+                                    </span>
+                                    <span class="userMenu__text">Learner Home</span>
+                                </li>
+                                <li class="userMenu__listItem">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 14.731 12.084">
+                                            <g id="book_3_" data-name="book (3)" transform="translate(0 -46.003)">
+                                              <path id="Path_24314" data-name="Path 24314" d="M14.3,347.729h-.46v-1.295a.432.432,0,0,0-.432-.432H9.092a2.156,2.156,0,0,0-1.726.865A2.156,2.156,0,0,0,5.639,346H1.324a.432.432,0,0,0-.432.432v1.295H.432a.432.432,0,0,0,0,.863H4.511a3.207,3.207,0,0,1,2.045.579,1.3,1.3,0,0,0,1.62,0,3.207,3.207,0,0,1,2.045-.579H14.3a.432.432,0,0,0,0-.863Zm-9.789,0H1.755v-.863H5.639a1.3,1.3,0,0,1,1.295,1.295v.217A4.171,4.171,0,0,0,4.511,347.729Zm3.286.649v-.217a1.3,1.3,0,0,1,1.295-1.295h3.884v.863H10.22A4.171,4.171,0,0,0,7.8,348.378Z" transform="translate(0 -291.368)"/>
+                                              <path id="Path_24315" data-name="Path 24315" d="M212.295,136a1.295,1.295,0,1,0,1.295,1.295A1.3,1.3,0,0,0,212.295,136Zm0,1.726a.432.432,0,1,1,.432-.432A.432.432,0,0,1,212.295,137.729Z" transform="translate(-204.929 -87.411)"/>
+                                              <path id="Path_24316" data-name="Path 24316" d="M129.723,48.693l-.863-1.5a.432.432,0,0,0-.59-.158l-.637.368a2.985,2.985,0,0,0-.411-.238v-.734A.432.432,0,0,0,126.79,46h-1.726a.432.432,0,0,0-.432.432v.734a2.989,2.989,0,0,0-.411.238l-.637-.368a.432.432,0,0,0-.59.158l-.863,1.5a.432.432,0,0,0,.158.59l.628.363a2.563,2.563,0,0,0,0,.485l-.628.363a.432.432,0,0,0-.158.59l.863,1.5a.432.432,0,0,0,.59.158l.637-.368a2.988,2.988,0,0,0,.411.238v.734a.432.432,0,0,0,.432.432h1.726a.432.432,0,0,0,.432-.432v-.734a2.988,2.988,0,0,0,.411-.238l.637.368a.432.432,0,0,0,.59-.158l.863-1.5a.432.432,0,0,0-.158-.59l-.628-.363a2.565,2.565,0,0,0,0-.485l.628-.363A.432.432,0,0,0,129.723,48.693Zm-1.678.8a1.936,1.936,0,0,1,0,.785.432.432,0,0,0,.209.452l.506.292-.432.748-.513-.3a.432.432,0,0,0-.5.045,2.139,2.139,0,0,1-.673.39.432.432,0,0,0-.287.407v.59H125.5v-.59a.432.432,0,0,0-.287-.407,2.138,2.138,0,0,1-.673-.39.432.432,0,0,0-.5-.045l-.513.3-.432-.748.506-.292a.432.432,0,0,0,.209-.452,1.935,1.935,0,0,1,0-.785.432.432,0,0,0-.209-.452l-.506-.292.432-.748.513.3a.432.432,0,0,0,.5-.045,2.139,2.139,0,0,1,.673-.39.432.432,0,0,0,.287-.407v-.59h.863v.59a.432.432,0,0,0,.287.407,2.139,2.139,0,0,1,.673.39.432.432,0,0,0,.5.045l.513-.3.432.748-.506.292a.432.432,0,0,0-.209.452Z" transform="translate(-118.562 0)"/>
+                                            </g>
+                                          </svg>                                          
+                                    </span>
+                                    <span class="userMenu__text">Settings</span>
+                                </li>
+                                <li class="userMenu__listItem">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 11.35 11.35" class="donate">
+                                            <g id="blood-drop" transform="translate(0.1 0.1)">
+                                              <path id="Path_24319" data-name="Path 24319" d="M7.557,1.982a3.572,3.572,0,0,0-1.514.335c-.357-.552-.724-1.074-1.05-1.49C4.393.061,4.218,0,4.051,0s-.355.066-1,.9A22.351,22.351,0,0,0,1.772,2.771C1.11,3.845,0,5.835,0,7.1A4.051,4.051,0,0,0,7.534,9.168h.023a3.593,3.593,0,0,0,0-7.187ZM4.051,10.5a3.4,3.4,0,0,1-3.4-3.4A9.292,9.292,0,0,1,2.221,3.289,16.781,16.781,0,0,1,4.051.726,14.277,14.277,0,0,1,5.478,2.646,3.592,3.592,0,0,0,6.8,9.089,3.4,3.4,0,0,1,4.051,10.5ZM7.557,8.515a2.94,2.94,0,1,1,2.94-2.94A2.943,2.943,0,0,1,7.557,8.515Z" transform="translate(0)" stroke="#363636" stroke-width="0.2"/>
+                                              <path id="Path_24320" data-name="Path 24320" d="M296.876,152.282a2.43,2.43,0,0,0-.655-.3l-.127-.044c-.374-.139-.439-.236-.437-.392,0-.316.331-.342.436-.342h0c.191,0,.494.093.494.336a.327.327,0,1,0,.653,0,.986.986,0,0,0-.8-.944v-.274a.327.327,0,1,0-.653,0v.264a1.1,1.1,0,0,0-.415.192.946.946,0,0,0-.369.762c-.006.7.625.927.929,1.034l.077.025c.463.159.607.242.605.451,0,.316-.331.342-.436.342h0c-.191,0-.494-.093-.494-.336a.327.327,0,0,0-.653,0,.986.986,0,0,0,.8.944v.285a.327.327,0,1,0,.653,0v-.275a1.1,1.1,0,0,0,.415-.192.946.946,0,0,0,.369-.762A.9.9,0,0,0,296.876,152.282Z" transform="translate(-288.578 -146.728)" stroke="#363636" stroke-width="0.2"/>
+                                            </g>
+                                        </svg>     
+                                    </span>
+                                    <span class="userMenu__text">Donate</span>
+                                </li>
+                                <li class="userMenu__listItem">
+                                    <span class="icon">
+                                        <svg id="help_1_" data-name="help (1)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.529 12.529">
+                                            <g id="Group_12663" data-name="Group 12663">
+                                              <g id="Group_12662" data-name="Group 12662">
+                                                <path id="Path_24326" data-name="Path 24326" d="M222.315,343.22a.657.657,0,0,0,0,1.314.657.657,0,1,0,0-1.314Z" transform="translate(-216.243 -334.821)"/>
+                                                <path id="Path_24327" data-name="Path 24327" d="M185.7,140c-1.152,0-1.68.682-1.68,1.143a.489.489,0,0,0,.512.486c.461,0,.273-.657,1.143-.657.426,0,.768.188.768.58,0,.461-.478.725-.759.964a1.561,1.561,0,0,0-.572,1.3c0,.444.119.572.469.572.418,0,.5-.188.5-.35a1.071,1.071,0,0,1,.478-1.066,2.183,2.183,0,0,0,.955-1.561C187.519,140.608,186.794,140,185.7,140Z" transform="translate(-179.519 -136.576)"/>
+                                                <path id="Path_24328" data-name="Path 24328" d="M6.265,0A6.261,6.261,0,0,0,0,6.265V12.04a.489.489,0,0,0,.489.489H6.265A6.265,6.265,0,0,0,6.265,0Zm0,11.55H.979V6.265A5.286,5.286,0,1,1,6.265,11.55Z"/>
+                                              </g>
+                                            </g>
+                                        </svg>                                                                                 
+                                    </span>
+                                    <span class="userMenu__text">Help</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="navbar__menu--list--item tm__search__button">
+                        <span (click)="headerSearchHandler()">
+                            <span class="material-icons">
+                                search
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Header area end -->

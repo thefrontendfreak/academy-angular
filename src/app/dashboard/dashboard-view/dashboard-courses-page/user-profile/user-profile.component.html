@@ -1,0 +1,237 @@
+<!-- User profile start -->
+<div class="userProfile">
+    <div class="userProfile__wrapper pl__30 pt__20">
+        <div class="userProfile__title">
+            <h4 class="pr__color underline">
+                My Profile
+            </h4>
+        </div>
+        <div class="userProfile__details mt__20">
+            <div class="row">
+                <!-- Showcase card -->
+                <div class="col-lg-5 col-md-12 mb__35 cs__col6 cs__order1">
+                    <div class="userProfile__card showcase">
+                        <div class="userProfile__cardHeader d__flex jc__between">
+                            <h6>Showcase</h6>
+                            <div class="privacy">
+                                <p class="current__value" (click)="privacyHandler()">
+                                    <span class="material-icons">
+                                        person
+                                    </span>
+                                    Coaches
+                                </p>
+                                <div class="privacy__box" [ngClass]="{'show': showPrivacyBox}">
+                                    <div class="radio__input">
+                                        <input type="radio" id="radio1" name="grade_radio" value="radio1">
+                                        <label for="radio1" (click)="hidePrivacyBox()">Coaches</label>
+                                    </div>
+                                    <div class="radio__input">
+                                        <input type="radio" id="radio2" name="grade_radio" value="radio2">
+                                        <label for="radio2" (click)="hidePrivacyBox()">Everyone</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="userProfile__cardBody">
+                            <div class="userProfile__sheildBadges d__flex jc__between">
+                                <div class="userProfile__singlehSheildbadge badge__box">
+                                    <img src="assets/img/icons/yshield.png" alt="Badge icon">
+                                </div>
+                                <div class="userProfile__singlehSheildbadge badge__box">
+                                    <img src="assets/img/icons/yshield.png" alt="Badge icon">
+                                </div>
+                                <div class="userProfile__singlehSheildbadge badge__box">
+                                    <img src="assets/img/icons/shield.png" alt="Badge icon">
+                                </div>
+                                <div class="userProfile__singlehSheildbadge badge__box">
+                                    <img src="assets/img/icons/shield.png" alt="Badge icon">
+                                </div>
+                            </div>
+                            <div class="userProfile__statistics">
+                                <p class="s__title ht__color">User statistics</p>
+                                <p class="d__flex jc__between">
+                                    <span>Date joined</span>
+                                    <span class="joining__date">25 days ago</span>
+                                </p>
+                                <p class="d__flex jc__between">
+                                    <span>Energy point earned </span>
+                                    <span class="e__point">01</span>
+                                </p>
+                                <p class="d__flex jc__between">
+                                    <span>Videos Completed </span>
+                                    <span class="joining__date">01</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Streak card with chart-->
+                <div class="col-md-7 mb__35 cs__col12 cs__order3">
+                    <div class="userProfile__card streak">
+                        <div class="userProfile__cardHeader d__flex jc__between">
+                            <h6>Streak</h6>
+                            <div class="privacy">
+                                <p class="current__value">
+                                    <span class="material-icons">
+                                        public
+                                    </span>
+                                    Everyone
+                                </p>
+                            </div>
+                        </div>
+                        <div class="userProfile__cardBody">
+                            <div class="row ai__center">
+                                <div class="col-md-9">
+                                    <div class="userProfile__userChart">
+                                        <div class="date__select">
+                                            <div class="cs__select sm">
+                                                <select class="pr__select" name="" id="">
+                                                    <option value="">August</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="userProfile__chart">
+                                            <div>
+                                                <div>
+                                                    <div class="chart">
+                                                        <canvas id="myChart" width="700" height="315"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="userProfile__status text-center">
+                                        <h6 class="ht__color f__500">Today's status</h6>
+                                        <div class="streak__wrapper">
+                                            <div class="curren__streak">
+                                                <span class="d__block sl__text">Current streak</span>
+                                                <h4 class="ht__color">0 Day's</h4>
+                                                <span class="streak__date sl__text">Aug 28</span>
+                                            </div>
+                                            <div class="longest__streak">
+                                                <span class="d__block sl__text">Longest streak</span>
+                                                <h4 class="ht__color">0 Day's</h4>
+                                                <span class="streak__date sl__text">Aug 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Badges card -->
+                <div class="col-lg-5 col-md-12 mb__35 cs__col6 cs__order2">
+                    <div class="userProfile__card badges">
+                        <div class="userProfile__cardHeader d__flex jc__between">
+                            <h6>
+                                Badge Counts
+                                <span class="view__button" [routerLink]="['/dashboard/badges']" routerLinkActive="router-link-active" >View all</span>
+                            </h6>
+                            <div class="privacy">
+                                <p class="current__value">
+                                    <span class="material-icons">
+                                        person
+                                    </span>
+                                    Coaches
+                                </p>
+                            </div>
+                        </div>
+                        <div class="userProfile__cardBody">
+                            <div class="userProfile__badges d__flex jc__between">
+                                <div class="userProfile__singlehBadge badge__box">
+                                    <span class="d__block badges__count">1</span>
+                                    <img src="assets/img/icons/009-third-rank.png" alt="Badge icon">
+                                </div>
+                                <div class="userProfile__singlehBadge badge__box">
+                                    <span class="d__block badges__count">2</span>
+                                    <img src="assets/img/icons/008-number-1.png" alt="Badge icon">
+                                </div>
+                                <div class="userProfile__singlehBadge badge__box">
+                                    <span class="d__block badges__count">3</span>
+                                    <img src="assets/img/icons/007-number-2.png" alt="Badge icon">
+                                </div>
+                                <div class="userProfile__singlehBadge badge__box">
+                                    <span class="d__block badges__count">2</span>
+                                    <img src="assets/img/icons/006-number-3.png" alt="Badge icon">
+                                </div>
+                                <div class="userProfile__singlehBadge badge__box">
+                                    <span class="d__block badges__count">1</span>
+                                    <img src="assets/img/icons/005-medal-1.png" alt="Badge icon">
+                                </div>
+                            </div>
+                            <p class="pr__color">Check for new badges and avatar</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Discussion card -->
+                <div class="col-lg-7 col-md-12 mb__35 cs__order5">
+                    <div class="userProfile__card discussion">
+                        <div class="userProfile__cardHeader d__flex jc__between">
+                            <h6>
+                                Discussion
+                                <span class="view__button" [routerLink]="['/dashboard/discussions']" >View all</span>
+                            </h6>
+                            <div class="privacy">
+                                <p class="current__value">
+                                    <span class="material-icons">
+                                        public
+                                    </span>
+                                    Everyone
+                                </p>
+                            </div>
+                        </div>
+                        <div class="userProfile__cardBody">
+                            <div class="userProfile__discussionWrapper d__flex ai__center">
+                                <div class="discuttion__icon">
+                                    <img src="assets/img/icons/debate.png" alt="Discussion icon">
+                                </div>
+                                <div class="discussion__title">
+                                    <h4 class="ht__color f__500">
+                                        You don't have any discussion 
+                                        activity yet.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Usser projects -->
+                <div class="col-lg-5 col-md-12 mb__35 cs__order4">
+                    <div class="userProfile__card projects">
+                        <div class="userProfile__cardHeader d__flex jc__between">
+                            <h6>
+                                Projects
+                                <span class="view__button">View all</span>
+                            </h6>
+                            <div class="privacy">
+                                <p class="current__value">
+                                    <span class="material-icons">
+                                        public
+                                    </span>
+                                    Everyone
+                                </p>
+                            </div>
+                        </div>
+                        <div class="userProfile__cardBody">
+                            <div class="userProfile__projectWrapper text-center">
+                                <div class="no__project d__flex">
+                                    <img src="assets/img/icons/rocket.png" alt="">
+                                    <h5 class="pr__color f__500">
+                                        You don't have any project yet.
+                                    </h5>
+                                </div>
+                                <button class="btn__bgg__mid d__block">Learning programming</button>
+                                <button class="btn__bgw__mid d__block">Create a new project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- User profile end -->

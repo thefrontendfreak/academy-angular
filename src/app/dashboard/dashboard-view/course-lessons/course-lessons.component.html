@@ -1,0 +1,369 @@
+<div class="courseLessons">
+    <div class="courseLessons__header mb__30 p__relative">
+        <h4 class="ht__color f__600"> Chemistry of life</h4>
+        <p class="courseLessons__courseGroup pr__color">AP®︎/College Biology</p>
+        <span class="view__chapterButton d__none" (click)='lessonSidebarHandler()'>
+            View all chapter
+            <span class="material-icons">
+                keyboard_arrow_right
+            </span>
+        </span>
+    </div>
+    <div class="courseLessons__content">
+        <div class="row no-gutters b__top">
+            <!-- Lessons sidebar start -->
+            <div class="lessonSidebar__wrapper col-md-3 col-lg-3 cs__col2 b__right" [ngClass]="{'show__sidebar': showLessonSidebar}">
+                <div class="courseLessons__sidebar pt__20 pb__20">
+                    <div class="courseLessons__masteryPoints">
+                        <h5 class="ht__color m__points">13,100</h5>
+                        <p class="pt__color m__text">Mastery point available in course</p>
+                    </div>
+                    <div class="courseLessons__sideBarMenu mt__20">   
+                        <p class="courseLessons__skillSummery ht__color f__600 mb__15">
+                            Skill summary
+                            <span class="sm__button">
+                                <span class="material-icons">
+                                    help_outline
+                                </span>
+                            </span>
+                        </p>  
+                        <ul class="courseLessons__sideMenuList">
+                            <li class="courseLessons__sideMenuListItem" (click)="scroll(card1)">
+                                <span>
+                                    Structure of water and 
+                                    hydrogen bonding
+                                </span>
+                            </li>
+                            <li class="courseLessons__sideMenuListItem" (click)="scroll(card2)">
+                                <span>
+                                    Elements of life
+                                </span>
+                            </li>
+                            <li class="courseLessons__sideMenuListItem" (click)="scroll(card3)">
+                                <span>
+                                    Introduction to biological 
+                                    macromolecules
+                                </span>
+                            </li>
+                            <li class="courseLessons__sideMenuListItem" (click)="scroll(card4)">
+                                <span>
+                                    Quiz 1: 5 questions
+                                    Practice what you’ve learned, 
+                                    and level up on the above skills
+                                </span>
+                            </li>
+                            <li class="courseLessons__sideMenuListItem">
+                                <span>
+                                    Properties, structure, and 
+                                    function of biological 
+                                    macromolecules
+                                </span>
+                            </li>
+                            <li class="courseLessons__sideMenuListItem">
+                                <span>
+                                    Nucleic acids
+                                </span>
+                            </li>
+                            <li class="courseLessons__sideMenuListItem">
+                                <span>
+                                    Quiz 2: 5 questions
+                                    Practice what you’ve learned, 
+                                    and level up on the above skills
+                                </span>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-9 col-lg-9 cs__col10">
+                <!-- Lessons area start -->
+                <div class="courseLessons__lessonsWrapper pl__20 pt__20">
+                    <div class="courseLessons__lessonCard" #card1>
+                        <div class="courseLessons__lessonTitle">
+                            <h6 class="pr__color underline f__600">
+                                Structure of water and hydrogen bonding
+                            </h6>
+                        </div>
+                        <div class="courseLessons__singleLesson">
+                            <div class="row">
+                                <div class="col-md-6 cs__col12">
+                                    <p class="ht__color f__500 mt__20">Learn</p>
+                                    <div class="courseLessons__lessonsListWrapper">
+                                        <hr>
+                                        <ul class="courseLessons__lessonsList">
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Hydrogen bonding in water</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Hydrogen bonds in water</span>
+                                                </span>       
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Capillary action and why we see a meniscus</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Surface tension</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Cohesion and adhesion of water</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Water as a solvent</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Specific heat, heat of vaporization, and density of water </span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Importance of water for life</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 cs__col12">
+                                    <div class="courseLessons__practiceWrapper">
+                                        <p class="ht__color f__500 mt__20">Practice</p>
+                                        <hr>
+                                        <div class="courseLessons__practiceCard">
+                                            <p class="ht__color practice__title f__500">
+                                                Structure of water and hydrogen bonding
+                                            </p>
+                                            <p class="pt__color lavelUp__text">
+                                                Get 3 of 4 questions to level up!
+                                            </p>
+                                            <button class="btn__bgw__mid">Practice</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courseLessons__lessonCard" #card2>
+                        <div class="courseLessons__lessonTitle">
+                            <h6 class="pr__color underline f__600">
+                                Elements of life
+                            </h6>
+                        </div>
+                        <div class="courseLessons__singleLesson">
+                            <div class="row">
+                                <div class="col-md-6 cs__col12">
+                                    <p class="ht__color f__500 mt__20">Learn</p>
+                                    <div class="courseLessons__lessonsListWrapper">
+                                        <hr>
+                                        <ul class="courseLessons__lessonsList">
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Elements and atoms </span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">HMatter, elements, and atoms</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Carbon as a building block of life</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Carbon and hydrocarbons </span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Functional groups</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Functional groups</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Elemental building blocks of biological molecules </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 cs__col12">
+                                    <div class="courseLessons__practiceWrapper">
+                                        <p class="ht__color f__500 mt__20">Practice</p>
+                                        <hr>
+                                        <div class="courseLessons__practiceCard">
+                                            <p class="ht__color practice__title f__500">
+                                                Elements of life
+                                            </p>
+                                            <p class="pt__color lavelUp__text">
+                                                Get 3 of 4 questions to level up!
+                                            </p>
+                                            <button class="btn__bgw__mid">Practice</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courseLessons__lessonCard" #card3>
+                        <div class="courseLessons__lessonTitle">
+                            <h6 class="pr__color underline f__600">
+                                Introduction to biological macromolecules
+                            </h6>
+                        </div>
+                        <div class="courseLessons__singleLesson">
+                            <div class="row">
+                                <div class="col-md-6 cs__col12">
+                                    <p class="ht__color f__500 mt__20">Learn</p>
+                                    <div class="courseLessons__lessonsListWrapper">
+                                        <hr>
+                                        <ul class="courseLessons__lessonsList">
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Ionic bonds</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Covalent bonds</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Chemical bonds</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Introduction to macromolecules</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/file.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Dehydration synthesis or a condensation reaction</span>
+                                                </span>
+                                            </li>
+                                            <li class="courseLessons__lessonsListItem">
+                                                <span class="courseLessons__ltemWrapper">
+                                                    <span class="icon">
+                                                        <img src="assets/img/icons/v-icon.png" alt="">
+                                                    </span>
+                                                    <span class="lesson__name">Hydrolysis</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 cs__col12">
+                                    <div class="courseLessons__practiceWrapper">
+                                        <p class="ht__color f__500 mt__20">Practice</p>
+                                        <hr>
+                                        <div class="courseLessons__practiceCard">
+                                            <p class="ht__color practice__title f__500">
+                                                Elements of life
+                                            </p>
+                                            <p class="pt__color lavelUp__text">
+                                                Get 3 of 4 questions to level up!
+                                            </p>
+                                            <button class="btn__bgw__mid">Practice</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courseLessons__quizCard" #card4>
+                        <div class="courseLessons__quizCardContent">
+                            <h6 class="courseLessons__quizTitle pr__color underline f__500 mb__10">
+                                Quiz 1
+                            </h6>
+                            <p class="pt__color quiz__text mb__20">
+                                Level up on the above skills and collect up to 300 Mastery points
+                            </p>
+                            <button class="btn__bgw__big">Start now</button>
+                        </div>
+                        <div class="courseLessons__quizBanner">
+                            <img src="assets/img/quiz.png" alt="Quiz banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

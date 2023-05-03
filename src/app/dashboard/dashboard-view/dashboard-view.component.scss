@@ -1,0 +1,35 @@
+.dashboard {
+  &__content {
+    position: relative;
+    width: 100%;
+    margin-left: 26rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 10rem;
+    transition: all .4s;
+    &.tg__margin{
+      margin-left: 8rem;
+    }
+  }
+}
+
+
+// Responsie style 
+
+@media screen and (max-width:1080px){
+  .dashboard{
+    &__content{
+      padding: 3rem 8rem;
+      margin: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width:575px){
+  .dashboard{
+    &__content{
+      padding: 3rem 1.5rem !important;
+      margin: 0 !important;
+    }
+  }
+}

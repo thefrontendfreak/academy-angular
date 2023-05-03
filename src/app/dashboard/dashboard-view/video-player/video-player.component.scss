@@ -1,0 +1,141 @@
+.videoPlayer{
+  &__videoTitle{
+    p.tacher__name{
+      font-size: 1.4rem;
+      margin-top: .5rem;
+    }
+    p.video__views {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.6rem;
+    }
+  }
+  &__singleRelatedVideo{
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+  &__singleRelatedVideoheader {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    display: flex;
+  }
+  &__singleRelatedVideosingleClass {
+    cursor: pointer;
+  }
+  &__singlesingleRelatedVideoinfoButton {
+    margin-right: 1rem;
+  }
+  &__singleRelatedVideoclassBanner {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  &__singleRelatedVideoclassTitle {
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+    color: #363636;
+    font-weight: 600;
+  }
+  &__singleRelatedVideoview {
+    font-size: 1.2rem;
+    color: #b5b5b5;
+  }
+  &__singleRelatedVideoclassDuration {
+    position: absolute;
+    bottom:0;
+    right: 0;
+    padding: 0.2rem 0.5rem;
+    background: #363636;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }  
+}
+
+@media screen and (min-width:1600px){
+  .cs__col9{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .cs__col3{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (max-width:1300px){
+  iframe {
+    height: 465px;
+  }
+}
+
+@media screen and(max-width:992px){
+  .lt__none{
+    display: none;
+  }
+  iframe {
+    height: 365px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .videoPlayer__courseTitle{
+    h5{
+      font-size: 1.8rem;
+    }
+  }
+  .videoPlayer__videoTitle {
+    margin-top: 0;
+    h5{
+      font-size: 1.6rem;
+    }
+  }
+  .videoPlayer__videoTitle p.video__views{
+    font-size: 1.3rem;
+  }
+  iframe {
+    height: 265px;
+  }
+  .videoPlayer__singleRelatedVideoclassTitle{
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width:575px){
+  iframe{
+    height: 220px;
+  }
+  .videoPlayer__videoTitle h5{
+    font-size: 1.4rem;
+    width: 70%;
+  }
+  .videoPlayer__videoTitle p.tacher__name{
+    font-size: 1.3rem;
+  }
+  .videoPlayer__videoTitle p.video__views{
+    font-size: 1.2rem;
+  }
+  .videoPlayer__singleRelatedVideoclassBanner img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+  .videoPlayer__singleRelatedVideo{
+    margin-bottom: 1rem;
+  }
+  .videoPlayer__singleRelatedVideosingleClass{
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0 , .15);
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+  .videoPlayer__singleRelatedVideodetails{
+    padding: .8rem 1rem;
+  }
+  .videoPlayer__singleRelatedVideoclassTitle{
+    margin-top: 0;
+  }
+}

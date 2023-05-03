@@ -1,0 +1,148 @@
+.chatPage {
+  margin-top: -2rem;
+  margin-left: -2rem;
+  .b__right{
+    border-color:#43BF97;
+  }
+  &__sidebar {
+    min-height: calc(100vh - 85px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 8.5rem;
+  }
+  &__sideBarTitle {
+    padding: 2rem;
+  }
+  &__teachersList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+      padding: 2rem 0;
+      padding-left: 2rem;
+      border-top: 1px solid #EBEBEB;
+      cursor: pointer;
+      .teacher__img{
+        margin-right: 2rem;
+        img{
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .teacher__faculty{
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__chatMain {
+    position: relative;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    height: calc(100vh - 85px);
+    overflow: hidden;
+  }
+  &__chatMessages{
+    height: 88%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__chatSingleMessage {
+    width: 50%;
+    .inner__box{
+      margin-bottom: 1rem;
+      .img__box{
+        margin-right: 1rem;
+        img{
+          width: 6rem;
+          height: 6rem;
+          border-radius: 1.5rem;
+          object-fit: cover;
+        }
+      }
+      .m__box {
+        padding: 2rem;
+        background: #43bf97;
+        border-radius: 2.4rem;
+        border-top-left-radius: 0;
+        span{
+          display: block;
+          color: #fff;
+          &.time{
+            font-size: 1.1rem;
+            margin-bottom: .5rem;
+          }
+          &.message__text{
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .seen__status{
+        font-size: 1.1rem;
+        span.material-icons{
+          font-size: 1.6rem;
+          margin-top: -.2rem;
+          color: #43bf97;
+        }
+      }
+      &.teacherMessageBox{
+        .img__box{
+          margin-right: 0;
+          margin-left: 1rem;
+        }
+        .m__box{
+          background: #EBEBEB;
+          span{
+            color: #363636;
+          }
+        }
+      }
+    }
+    &.teacher__side{
+      margin-left: auto;
+    }
+  }
+  &__chatBox {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    width: 100%;
+    padding-left: 2rem;
+    .chat__input {
+      width: 80%;
+      margin-right: 3rem;
+      input{
+        width: 100%;
+        height: 6rem;
+        border: 0;
+        background: #EBEBEB;
+        border-radius: 1.2rem;
+        padding-left: 2rem;
+      }
+    }
+    .attach__button {
+      margin-right: 3rem;
+      cursor: pointer;
+      span.material-icons{
+        transform-origin: center;
+        transform: rotate(-45deg);
+        color: #B5B5B5;
+      }
+    }
+    .send__button{
+      button{
+        background: transparent;
+        border: 0;
+        img{
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+    }
+  }
+}

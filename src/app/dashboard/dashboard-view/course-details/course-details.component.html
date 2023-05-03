@@ -1,0 +1,431 @@
+<div class="courseDetails">
+    <div class="courseDetails__header p__relative mb__30">
+        <h4 class="ht__color f__600">AP®︎/College Biology</h4>
+        <p class="courseDetails__courseGroup pr__color">Science</p>
+        <span class="view__chapterButton d__none" (click)='courseSidebarHandler()'>
+            View all chapter
+            <span class="material-icons">
+                keyboard_arrow_right
+            </span>
+        </span>
+    </div>
+    <div class="courseDetails__content">
+        <div class="row no-gutters b__top">
+            <!-- Course details sidebar -->
+            <div class="col-md-3 col-lg-3 cs__col2 courseSidebar__wrapper b__right" [ngClass]="{'show__sidebar': showCourseSidebar}">
+                <div class="courseDetails__sidebar pt__20 pb__20">
+                    <div class="courseDetails__masteryPoints">
+                        <h5 class="ht__color m__points">13,100</h5>
+                        <p class="pt__color m__text">Mastery point available in course</p>
+                    </div>
+                    <div class="courseDetails__sideBarMenu mt__20">   
+                        <p class="courseDetails__sideMenuTitle ht__color f__600 mb__15">
+                            Course Summery
+                        </p>  
+                        <ul class="courseDetails__sideMenuList">
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card1)">
+                                <span>
+                                    Chemistry of life
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card2)">
+                                <span>
+                                    Cell structure and function
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card3)">
+                                <span>
+                                    Cellular energetics
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card4)">
+                                <span>
+                                    Cell communication and cell cycle
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card5)">
+                                <span>
+                                    Heredity
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card6)">
+                                <span>
+                                    Gene expression and regulation
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card7)">
+                                <span>
+                                    Natural selection
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card8)">
+                                <span>
+                                    Ecology
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card9)">
+                                <span>
+                                    Worked examples of AP®︎ Biology free response questions
+                                </span>
+                            </li>
+                            <li class="courseDetails__sideMenuListItem" (click)="scroll(card10)">
+                                <span>
+                                    AP®︎ Biology standards mappings
+                                </span>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Courses area start -->
+            <div class="col-md-9 col-lg-9 cs__col10 ">
+                <div class="courseDetails__courses pt__20 pl__20">
+                    <div class="courseDetails__courseCard" #card1>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Chemistry of life</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                            <div class="courseDetails__courseStartButton d__flex jc__end">
+                                <button class="btn__bgg__big">Start live class</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card2>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Cell structure and function</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card3>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Cellular energetics</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card4>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Cell communication and cell cycle</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card5>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Heredity</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card6>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Gene expression and regulation</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card7>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Natural selection</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card8>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Ecology</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card9>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">Worked examples of AP®︎ Biology free response questions</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="courseDetails__courseCard" #card10>
+                        <div class="courseDetails__courseCardHeader">
+                            <p class="ht__color f__600">
+                                <span class="course__icon">
+                                    <img src="assets/img/icons/cicon7.png" alt="">
+                                </span>
+                                <span class="course__title">AP®︎ Biology standards mappings</span>
+                            </p>
+                        </div>
+                        <div class="courseDetails__courseLessons">
+                            <ul class="courseDetails__lessonsList">
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">1.</span>
+                                    <span>Structure of water and hydrogen bonding</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">2.</span>
+                                    <span>Properties, structure, and function of biological macromolecule</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">3.</span>
+                                    <span>Elements of life</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">4.</span>
+                                    <span>Nucleic acids</span>
+                                </li>
+                                <li class="courseDetails__lessonsListItem">
+                                    <span class="lesson__number">5.</span>
+                                    <span>Introduction to biological macromolecules</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

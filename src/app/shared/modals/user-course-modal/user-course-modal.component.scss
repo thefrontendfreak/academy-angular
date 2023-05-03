@@ -1,0 +1,246 @@
+// modal style
+.close__modal {
+  position: absolute;
+  left: 1rem;
+  top: 1.8rem;
+  background: #fff;
+  border: 0;
+  color: #363636;
+  span {
+    vertical-align: middle;
+    font-size: 2rem;
+  }
+}
+.coursesModal__header {
+  padding: 1.5rem 0;
+}
+.coursesModal__wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  .modal-content {
+    margin-top: 10rem;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    border: 0;
+    background: #fff;
+  }
+}
+.banner__box {
+  padding: 4rem 0;
+  background: #43bf97;
+  h5 {
+    margin-bottom: 0.5rem;
+  }
+}
+.content__box {
+  padding: 1.5rem 2rem;
+  height: 38rem;
+  overflow-y: scroll;
+}
+.content__box::-webkit-scrollbar {
+  width: 5px;
+  height: 80%;
+  background: #ebebeb;
+}
+.content__box::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+}
+.gradeInfo {
+  &__content {
+    padding: 1.5rem 2rem;
+  }
+}
+.courseInfo {
+  &__content {
+    padding: 1.5rem 2rem;
+  }
+  &__singleCourseLessons {
+    margin-bottom: 2rem;
+  }
+}
+.coursesModal__footer {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .goBack {
+    cursor: pointer;
+  }
+  .footer__right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    p {
+      margin-right: 2rem;
+    }
+  }
+}
+
+
+// Responsive part
+
+@media screen and (max-width:1400px){
+  .coursesModal__header {
+    padding: 1rem 0;
+  }
+  .close__modal{
+    top: 1.2rem;
+  }
+  .banner__box {
+    padding: 2rem 0;
+    background: #43bf97;
+  }
+}
+@media screen and (max-width:992px){
+  .coursesModal__header{
+    h4{
+      font-size: 2rem;
+    }
+  }
+  .banner__box{
+    padding: 1rem 0;
+  }
+  .banner__box {
+    h5{
+      font-size: 1.8rem;
+    }
+    p{
+      font-size: 1.4rem;
+    }
+  }
+  .gradeInfo__checkboxWrapper{
+    h6{
+      font-size: 1.6rem;
+    }
+  }
+  .content__box{
+    height: 30rem;
+  }
+  .radio__input label{
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+  }
+  .courseInfo__singleCourseTitle{
+    h5{
+      font-size: 1.6rem;
+    }
+  }
+  .checkbox__conatiner{
+    font-size: 1.4rem;
+    margin-bottom: .8rem;
+    .checkmark{
+      top: 2px;
+    }
+  }
+  .coursesModal__footer{
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media screen and (max-width:575px){
+  .close__modal{
+    top: .8rem;
+  }
+  .coursesModal__header h4{
+    font-size: 1.8rem;
+  }
+  .banner__box h5{
+    font-size: 1.6rem;
+  }
+  .banner__box p{
+    font-size: 1.2rem;
+  }
+  .gradeInfo__checkboxWrapper {
+    margin-bottom: 1rem;
+  }
+  .gradeInfo__checkboxWrapper h6{
+    font-size: 1.4rem;
+  }
+  .radio__input label{
+    font-size: 1.2rem;
+  }
+  .radio__input label:before {
+    top: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .radio__input input[type=radio]:checked + label:after{
+    top: 9px;
+    left: 9.5px;
+  }
+  hr{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+  .stepInfo{
+    font-size: 1.2rem;
+  }
+  .coursesModal__footer{
+    padding: 1rem 1rem;
+    margin-top: 0;
+  }
+  .courseInfo__singleCourseTitle h5{
+    font-size: 1.4rem;
+  }
+  .checkbox__conatiner{
+    font-size: 1.2rem;
+    padding-left: 2.2rem;
+  }
+  .checkmark{
+    height: 15px;
+    width: 15px;
+  }
+  .checkbox__conatiner .checkmark:after{
+    left: 3px;
+    top: 0px;
+  }
+  .coursesModal__footer .goBack{
+    font-size: 1.2rem;
+  }
+  .gradeInfo__content{
+    padding: 1.5rem 1rem;
+  }
+  .courseInfo__content{
+    padding: 1.5rem 1rem;
+  }
+  .coursesModal__footer .footer__right p{
+    margin-right: 1rem;
+  }
+  .content__box{
+    height: 28rem;
+  }
+}
+
+@media screen and (max-width:380px){
+  .close__modal{
+    left: 0;
+  }
+  .coursesModal__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__left {
+    width: 100%;
+    text-align: right;
+  }
+  .footer__right {
+    align-items: flex-start !important;
+    width: 100%;
+    margin-top: 2rem;
+    flex-direction: column;
+    button.btn__bgg__big {
+      width: 100%;
+    }
+  }
+  .footer__right .stepInfo {
+    margin-top: -2.8rem;
+    margin-bottom: 1rem;
+  }
+  button.btn__bgr__big {
+    width: 100% !important;
+  }
+  .content__box{
+    height: 25rem;
+  }
+}

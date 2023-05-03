@@ -1,0 +1,8 @@
+<div class="dashboard d__flex mt__80">
+    <div class="dashboard__sideBar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="dashboard__content" [ngClass]="{'tg__margin': status}">
+        <router-outlet></router-outlet>
+    </div>
+</div>
